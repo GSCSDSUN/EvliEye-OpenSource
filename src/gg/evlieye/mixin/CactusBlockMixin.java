@@ -26,7 +26,7 @@ import gg.evlieye.events.CactusCollisionShapeListener.CactusCollisionShapeEvent;
 @Mixin(CactusBlock.class)
 public abstract class CactusBlockMixin extends Block
 {
-	private CactusBlockMixin(EvlieyeClient wurst, Settings block$Settings_1)
+	private CactusBlockMixin(EvlieyeClient evlieye, Settings block$Settings_1)
 	{
 		super(block$Settings_1);
 	}

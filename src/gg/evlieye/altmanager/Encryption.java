@@ -56,11 +56,11 @@ public final class Encryption
 		createEncryptionFolder(encFolder);
 		
 		KeyPair rsaKeyPair =
-			getRsaKeyPair(encFolder.resolve("wurst_rsa_public.txt"),
-				encFolder.resolve("wurst_rsa_private.txt"));
+			getRsaKeyPair(encFolder.resolve("evlieye_rsa_public.txt"),
+				encFolder.resolve("evlieye_rsa_private.txt"));
 		
 		SecretKey aesKey =
-			getAesKey(encFolder.resolve("wurst_aes.txt"), rsaKeyPair);
+			getAesKey(encFolder.resolve("evlieye_aes.txt"), rsaKeyPair);
 		
 		try
 		{

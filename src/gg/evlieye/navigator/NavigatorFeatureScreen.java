@@ -119,9 +119,9 @@ public final class NavigatorFeatureScreen extends NavigatorScreen
 		// hasPrimaryAction ? 149 : 302, 20, "Help", b -> {
 		// MiscUtils.openLink("https://www.evlieye.gg/wiki/"
 		// + feature.getHelpPage() + "/");
-		// wurst.navigator.analytics.trackEvent("help", "open",
+		// evlieye.navigator.analytics.trackEvent("help", "open",
 		// feature.getName());
-		// wurst.navigator.addPreference(feature.getName());
+		// evlieye.navigator.addPreference(feature.getName());
 		// ConfigFiles.NAVIGATOR.save();
 		// }));
 		

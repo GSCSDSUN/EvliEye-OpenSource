@@ -19,13 +19,13 @@ import gg.evlieye.EvlieyeClient;
 
 public final class EventManager
 {
-	private final EvlieyeClient wurst;
+	private final EvlieyeClient evlieye;
 	private final HashMap<Class<? extends Listener>, ArrayList<? extends Listener>> listenerMap =
 		new HashMap<>();
 	
-	public EventManager(EvlieyeClient wurst)
+	public EventManager(EvlieyeClient evlieye)
 	{
-		this.wurst = wurst;
+		this.evlieye = evlieye;
 	}
 	
 	/**
@@ -44,7 +44,7 @@ public final class EventManager
 	
 	private <L extends Listener, E extends Event<L>> void fireImpl(E event)
 	{
-		if(!wurst.isEnabled())
+		if(!evlieye.isEnabled())
 			return;
 		
 		try

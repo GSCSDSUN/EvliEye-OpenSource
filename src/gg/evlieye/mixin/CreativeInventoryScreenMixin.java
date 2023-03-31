@@ -24,7 +24,7 @@ import gg.evlieye.EvlieyeClient;
 public abstract class CreativeInventoryScreenMixin
 	extends AbstractInventoryScreen<CreativeScreenHandler>
 {
-	private CreativeInventoryScreenMixin(EvlieyeClient wurst,
+	private CreativeInventoryScreenMixin(EvlieyeClient evlieye,
 		CreativeScreenHandler screenHandler, PlayerInventory playerInventory,
 		Text text)
 	{

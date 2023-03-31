@@ -46,7 +46,7 @@ import gg.evlieye.util.json.JsonUtils;
 
 public final class ClickGui
 {
-	private static final EvlieyeClient WURST = EvlieyeClient.INSTANCE;
+	private static final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
 	private static final MinecraftClient MC = EvlieyeClient.MC;
 	
 	private final ArrayList<Window> windows = new ArrayList<>();
@@ -79,9 +79,9 @@ public final class ClickGui
 			windowMap.put(category, new Window(category.getName()));
 		
 		ArrayList<Feature> features = new ArrayList<>();
-		features.addAll(WURST.getHax().getAllHax());
-		features.addAll(WURST.getCmds().getAllCmds());
-		features.addAll(WURST.getOtfs().getAllOtfs());
+		features.addAll(evlieye.getHax().getAllHax());
+		features.addAll(evlieye.getCmds().getAllCmds());
+		features.addAll(evlieye.getOtfs().getAllOtfs());
 		
 		for(Feature f : features)
 			if(f.getCategory() != null)
@@ -90,10 +90,10 @@ public final class ClickGui
 		windows.addAll(windowMap.values());
 		
 		Window uiSettings = new Window("UI Settings");
-		uiSettings.add(new FeatureButton(WURST.getOtfs().wurstLogoOtf));
-		uiSettings.add(new FeatureButton(WURST.getOtfs().hackListOtf));
-		uiSettings.add(new FeatureButton(WURST.getOtfs().keybindManagerOtf));
-		ClickGuiHack clickGuiHack = WURST.getHax().clickGuiHack;
+		uiSettings.add(new FeatureButton(evlieye.getOtfs().evlieyeLogoOtf));
+		uiSettings.add(new FeatureButton(evlieye.getOtfs().hackListOtf));
+		uiSettings.add(new FeatureButton(evlieye.getOtfs().keybindManagerOtf));
+		ClickGuiHack clickGuiHack = evlieye.getHax().clickGuiHack;
 		Stream<Setting> settings = clickGuiHack.getSettings().values().stream();
 		settings.map(Setting::getComponent).forEach(c -> uiSettings.add(c));
 		windows.add(uiSettings);
@@ -608,7 +608,7 @@ public final class ClickGui
 	
 	public void updateColors()
 	{
-		ClickGuiHack clickGui = WURST.getHax().clickGuiHack;
+		ClickGuiHack clickGui = evlieye.getHax().clickGuiHack;
 		
 		opacity = clickGui.getOpacity();
 		ttOpacity = clickGui.getTooltipOpacity();

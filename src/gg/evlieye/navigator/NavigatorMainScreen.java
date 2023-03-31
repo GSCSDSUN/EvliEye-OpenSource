@@ -143,8 +143,8 @@ public final class NavigatorMainScreen extends NavigatorScreen
 		// return;
 		// MiscUtils.openLink("https://www.evlieye.gg/wiki/"
 		// + feature.getHelpPage() + "/");
-		// EvlieyeClient wurst = EvlieyeClient.INSTANCE;
-		// wurst.navigator.addPreference(feature.getName());
+		// EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
+		// evlieye.navigator.addPreference(feature.getName());
 		// ConfigFiles.NAVIGATOR.save();
 		// }
 	}
@@ -172,8 +172,8 @@ public final class NavigatorMainScreen extends NavigatorScreen
 			return;
 		}
 		
-		EvlieyeClient wurst = EvlieyeClient.INSTANCE;
-		TooManyHaxHack tooManyHax = wurst.getHax().tooManyHaxHack;
+		EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
+		TooManyHaxHack tooManyHax = evlieye.getHax().tooManyHaxHack;
 		
 		if(tooManyHax.isEnabled() && tooManyHax.isBlocked(feature))
 		{
@@ -182,7 +182,7 @@ public final class NavigatorMainScreen extends NavigatorScreen
 		}
 		
 		feature.doPrimaryAction();
-		wurst.getNavigator().addPreference(feature.getName());
+		evlieye.getNavigator().addPreference(feature.getName());
 	}
 	
 	@Override

@@ -30,7 +30,7 @@ public final class EnabledHaxCmd extends Command
 			".enabledhax load-profile <file>",
 			".enabledhax save-profile <file>",
 			".enabledhax list-profiles [<page>]",
-			"Profiles are saved in '.minecraft/wurst/enabled hacks'.");
+			"Profiles are saved in '.minecraft/evlieye/enabled hacks'.");
 	}
 	
 	@Override
@@ -67,7 +67,7 @@ public final class EnabledHaxCmd extends Command
 		
 		try
 		{
-			WURST.getHax().loadProfile(name);
+			evlieye.getHax().loadProfile(name);
 			ChatUtils.message("Hacks loaded: " + name);
 			
 		}catch(NoSuchFileException e)
@@ -96,7 +96,7 @@ public final class EnabledHaxCmd extends Command
 		
 		try
 		{
-			WURST.getHax().saveProfile(name);
+			evlieye.getHax().saveProfile(name);
 			ChatUtils.message("Hacks saved: " + name);
 			
 		}catch(IOException | JsonException e)
@@ -120,7 +120,7 @@ public final class EnabledHaxCmd extends Command
 		if(args.length > 2)
 			throw new CmdSyntaxError();
 		
-		ArrayList<Path> files = WURST.getHax().listProfiles();
+		ArrayList<Path> files = evlieye.getHax().listProfiles();
 		int page = parsePage(args);
 		int pages = (int)Math.ceil(files.size() / 8.0);
 		pages = Math.max(pages, 1);

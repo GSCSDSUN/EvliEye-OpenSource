@@ -88,11 +88,11 @@ public final class AutoCompleteHack extends Hack
 		switch(apiProvider.getSelected())
 		{
 			case OPENAI:
-			String apiKey = System.getenv("WURST_OPENAI_KEY");
+			String apiKey = System.getenv("evlieye_OPENAI_KEY");
 			if(apiKey == null)
 			{
 				ChatUtils.error("API key not found. Please set the"
-					+ " WURST_OPENAI_KEY environment variable and reboot.");
+					+ " evlieye_OPENAI_KEY environment variable and reboot.");
 				setEnabled(false);
 				return;
 			}

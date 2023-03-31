@@ -27,11 +27,11 @@ import gg.evlieye.other_features.EvlieyeLogoOtf;
 public final class EvlieyeLogo
 {
 	private static final Identifier texture =
-		new Identifier("wurst", "wurst_128.png");
+		new Identifier("evlieye", "evlieye_128.png");
 	
 	public void render(MatrixStack matrixStack)
 	{
-		EvlieyeLogoOtf otf = EvlieyeClient.INSTANCE.getOtfs().wurstLogoOtf;
+		EvlieyeLogoOtf otf = EvlieyeClient.INSTANCE.getOtfs().evlieyeLogoOtf;
 		if(!otf.isVisible())
 			return;
 		

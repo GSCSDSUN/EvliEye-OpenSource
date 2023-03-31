@@ -47,7 +47,7 @@ public abstract class EntityRendererMixin<T extends Entity>
 				.addHealth((LivingEntity)entity, text);
 		
 		// do NameTags adjustments
-		wurstRenderLabelIfPresent(entity, text, matrixStack,
+		evlieyeRenderLabelIfPresent(entity, text, matrixStack,
 			vertexConsumerProvider, i);
 		ci.cancel();
 	}
@@ -56,7 +56,7 @@ public abstract class EntityRendererMixin<T extends Entity>
 	 * Copy of renderLabelIfPresent() since calling the original would result in
 	 * an infinite loop. Also makes it easier to modify.
 	 */
-	protected void wurstRenderLabelIfPresent(T entity, Text text,
+	protected void evlieyeRenderLabelIfPresent(T entity, Text text,
 		MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light)
 	{
 		NameTagsHack nameTags = EvlieyeClient.INSTANCE.getHax().nameTagsHack;

@@ -146,6 +146,6 @@ public final class Version implements Comparable<Version>
 		if(isPreRelease())
 			version += "pre" + preRelease;
 		
-		return "https://www.evlieye.gg/updates/wurst-" + version + "/";
+		return "https://www.evlieye.gg/updates/evlieye-" + version + "/";
 	}
 }

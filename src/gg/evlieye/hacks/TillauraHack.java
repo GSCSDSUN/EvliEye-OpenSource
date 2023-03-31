@@ -169,7 +169,7 @@ public final class TillauraHack extends Hack implements UpdateListener
 				continue;
 			
 			// face block
-			WURST.getRotationFaker().faceVectorPacket(hitVec);
+			evlieye.getRotationFaker().faceVectorPacket(hitVec);
 			
 			// right click block
 			IMC.getInteractionManager().rightClickBlock(pos, side, hitVec);

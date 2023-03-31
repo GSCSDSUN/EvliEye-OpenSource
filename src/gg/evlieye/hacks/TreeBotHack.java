@@ -226,7 +226,7 @@ public final class TreeBotHack extends Hack
 		for(BlockPos pos : blocksInRange)
 			if(breakBlock(pos))
 			{
-				WURST.getHax().autoToolHack.equipBestTool(pos, false, true, 0);
+				evlieye.getHax().autoToolHack.equipBestTool(pos, false, true, 0);
 				currentBlock = pos;
 				break;
 			}
@@ -264,7 +264,7 @@ public final class TreeBotHack extends Hack
 		Vec3d hitVec = center.add(relHitVec);
 		
 		// face block
-		WURST.getRotationFaker().faceVectorPacket(hitVec);
+		evlieye.getRotationFaker().faceVectorPacket(hitVec);
 		
 		// damage block
 		if(!MC.interactionManager.updateBlockBreakingProgress(pos, side))
@@ -281,7 +281,7 @@ public final class TreeBotHack extends Hack
 	public void onRender(MatrixStack matrixStack, float partialTicks)
 	{
 		RenderSystem.setShader(GameRenderer::getPositionProgram);
-		PathCmd pathCmd = WURST.getCmds().pathCmd;
+		PathCmd pathCmd = evlieye.getCmds().pathCmd;
 		
 		if(treeFinder != null)
 			treeFinder.renderPath(matrixStack, pathCmd.isDebugMode(),

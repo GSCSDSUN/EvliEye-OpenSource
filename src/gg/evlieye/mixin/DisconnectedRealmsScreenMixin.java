@@ -31,7 +31,7 @@ public class DisconnectedRealmsScreenMixin extends RealmsScreen
 	@Final
 	private Screen parent;
 	
-	private DisconnectedRealmsScreenMixin(EvlieyeClient wurst, Text title)
+	private DisconnectedRealmsScreenMixin(EvlieyeClient evlieye, Text title)
 	{
 		super(title);
 	}

@@ -84,16 +84,16 @@ public final class FightBotHack extends Hack
 	public void onEnable()
 	{
 		// disable other killauras
-		WURST.getHax().aimAssistHack.setEnabled(false);
-		WURST.getHax().clickAuraHack.setEnabled(false);
-		WURST.getHax().crystalAuraHack.setEnabled(false);
-		WURST.getHax().killauraLegitHack.setEnabled(false);
-		WURST.getHax().killauraHack.setEnabled(false);
-		WURST.getHax().multiAuraHack.setEnabled(false);
-		WURST.getHax().protectHack.setEnabled(false);
-		WURST.getHax().triggerBotHack.setEnabled(false);
-		WURST.getHax().tpAuraHack.setEnabled(false);
-		WURST.getHax().tunnellerHack.setEnabled(false);
+		evlieye.getHax().aimAssistHack.setEnabled(false);
+		evlieye.getHax().clickAuraHack.setEnabled(false);
+		evlieye.getHax().crystalAuraHack.setEnabled(false);
+		evlieye.getHax().killauraLegitHack.setEnabled(false);
+		evlieye.getHax().killauraHack.setEnabled(false);
+		evlieye.getHax().multiAuraHack.setEnabled(false);
+		evlieye.getHax().protectHack.setEnabled(false);
+		evlieye.getHax().triggerBotHack.setEnabled(false);
+		evlieye.getHax().tpAuraHack.setEnabled(false);
+		evlieye.getHax().tunnellerHack.setEnabled(false);
 		
 		pathFinder = new EntityPathFinder(MC.player);
 		
@@ -134,7 +134,7 @@ public final class FightBotHack extends Hack
 		if(entity == null)
 			return;
 		
-		WURST.getHax().autoSwordHack.setSlot();
+		evlieye.getHax().autoSwordHack.setSlot();
 		
 		if(useAi.isChecked())
 		{
@@ -152,7 +152,7 @@ public final class FightBotHack extends Hack
 			if(!pathFinder.isDone() && !pathFinder.isFailed())
 			{
 				PathProcessor.lockControls();
-				WURST.getRotationFaker()
+				evlieye.getRotationFaker()
 					.faceVectorClient(entity.getBoundingBox().getCenter());
 				pathFinder.think();
 				pathFinder.formatPath();
@@ -178,7 +178,7 @@ public final class FightBotHack extends Hack
 			// control height if flying
 			if(!MC.player.isOnGround()
 				&& (MC.player.getAbilities().flying
-					|| WURST.getHax().flightHack.isEnabled())
+					|| evlieye.getHax().flightHack.isEnabled())
 				&& MC.player.squaredDistanceTo(entity.getX(), MC.player.getY(),
 					entity.getZ()) <= MC.player.squaredDistanceTo(
 						MC.player.getX(), entity.getY(), MC.player.getZ()))
@@ -196,7 +196,7 @@ public final class FightBotHack extends Hack
 			// follow entity
 			MC.options.forwardKey.setPressed(
 				MC.player.distanceTo(entity) > distance.getValueF());
-			WURST.getRotationFaker()
+			evlieye.getRotationFaker()
 				.faceVectorClient(entity.getBoundingBox().getCenter());
 		}
 		
@@ -209,7 +209,7 @@ public final class FightBotHack extends Hack
 			return;
 		
 		// attack entity
-		WURST.getHax().criticalsHack.doCritical();
+		evlieye.getHax().criticalsHack.doCritical();
 		MC.interactionManager.attackEntity(MC.player, entity);
 		MC.player.swingHand(Hand.MAIN_HAND);
 		speed.resetTimer();
@@ -218,7 +218,7 @@ public final class FightBotHack extends Hack
 	@Override
 	public void onRender(MatrixStack matrixStack, float partialTicks)
 	{
-		PathCmd pathCmd = WURST.getCmds().pathCmd;
+		PathCmd pathCmd = evlieye.getCmds().pathCmd;
 		RenderSystem.setShader(GameRenderer::getPositionProgram);
 		pathFinder.renderPath(matrixStack, pathCmd.isDebugMode(),
 			pathCmd.isDepthTest());

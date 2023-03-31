@@ -28,7 +28,7 @@ public class ChatScreenMixin extends Screen
 	@Shadow
 	protected TextFieldWidget chatField;
 	
-	private ChatScreenMixin(EvlieyeClient wurst, Text text)
+	private ChatScreenMixin(EvlieyeClient evlieye, Text text)
 	{
 		super(text);
 	}

@@ -37,7 +37,7 @@ import gg.evlieye.hacks.HandNoClipHack;
 @Mixin(AbstractBlockState.class)
 public abstract class AbstractBlockStateMixin extends State<Block, BlockState>
 {
-	private AbstractBlockStateMixin(EvlieyeClient wurst, Block object,
+	private AbstractBlockStateMixin(EvlieyeClient evlieye, Block object,
 		ImmutableMap<Property<?>, Comparable<?>> immutableMap,
 		MapCodec<BlockState> mapCodec)
 	{

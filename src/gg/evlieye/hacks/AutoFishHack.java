@@ -56,7 +56,7 @@ public final class AutoFishHack extends Hack
 	@Override
 	public void onEnable()
 	{
-		WURST.getHax().airPlaceHack.setEnabled(false);
+		evlieye.getHax().airPlaceHack.setEnabled(false);
 		
 		castRodTimer = 0;
 		reelInTimer = -1;
@@ -165,7 +165,7 @@ public final class AutoFishHack extends Hack
 			ChatUtils.message(
 				"You can't get any treasure items while fishing like this.");
 			
-			if(!WURST.getHax().openWaterEspHack.isEnabled())
+			if(!evlieye.getHax().openWaterEspHack.isEnabled())
 				ChatUtils.message("Use OpenWaterESP to find open water.");
 		}
 		

@@ -30,8 +30,8 @@ public final class OtfList
 	public final TabGuiOtf tabGuiOtf = new TabGuiOtf();
 	public final TranslationsOtf translationsOtf = new TranslationsOtf();
 	public final VanillaSpoofOtf vanillaSpoofOtf = new VanillaSpoofOtf();
-	public final EvlieyeCapesOtf wurstCapesOtf = new EvlieyeCapesOtf();
-	public final EvlieyeLogoOtf wurstLogoOtf = new EvlieyeLogoOtf();
+	public final EvlieyeCapesOtf evlieyeCapesOtf = new EvlieyeCapesOtf();
+	public final EvlieyeLogoOtf evlieyeLogoOtf = new EvlieyeLogoOtf();
 	public final ZoomOtf zoomOtf = new ZoomOtf();
 	
 	private final TreeMap<String, OtherFeature> otfs =

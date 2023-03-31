@@ -119,7 +119,7 @@ public final class StepHack extends Hack implements UpdateListener
 	
 	public boolean isAutoJumpAllowed()
 	{
-		return !isEnabled() && !WURST.getCmds().goToCmd.isActive();
+		return !isEnabled() && !evlieye.getCmds().goToCmd.isActive();
 	}
 	
 	private enum Mode

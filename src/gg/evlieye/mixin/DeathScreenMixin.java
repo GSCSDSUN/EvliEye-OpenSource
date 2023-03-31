@@ -22,7 +22,7 @@ import gg.evlieye.events.DeathListener.DeathEvent;
 @Mixin(DeathScreen.class)
 public abstract class DeathScreenMixin extends Screen
 {
-	private DeathScreenMixin(EvlieyeClient wurst, Text text_1)
+	private DeathScreenMixin(EvlieyeClient evlieye, Text text_1)
 	{
 		super(text_1);
 	}

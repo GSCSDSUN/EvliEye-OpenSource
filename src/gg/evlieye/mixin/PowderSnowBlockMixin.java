@@ -22,7 +22,7 @@ import gg.evlieye.EvlieyeClient;
 public abstract class PowderSnowBlockMixin extends Block
 	implements FluidDrainable
 {
-	private PowderSnowBlockMixin(EvlieyeClient wurst, Settings settings)
+	private PowderSnowBlockMixin(EvlieyeClient evlieye, Settings settings)
 	{
 		super(settings);
 	}

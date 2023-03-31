@@ -52,6 +52,6 @@ public final class GetPosCmd extends Command
 	@Override
 	public void doPrimaryAction()
 	{
-		WURST.getCmdProcessor().process("getpos");
+		evlieye.getCmdProcessor().process("getpos");
 	}
 }

@@ -55,5 +55,5 @@ public final class NameTagsHack extends Hack
 	}
 	
 	// See LivingEntityRendererMixin and
-	// EntityRendererMixin.wurstRenderLabelIfPresent()
+	// EntityRendererMixin.evlieyeRenderLabelIfPresent()
 }

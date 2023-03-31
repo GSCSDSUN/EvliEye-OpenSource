@@ -30,7 +30,7 @@ public abstract class TitleScreenMixin extends Screen
 	private ClickableWidget realmsButton = null;
 	private ButtonWidget altsButton;
 	
-	private TitleScreenMixin(EvlieyeClient wurst, Text text_1)
+	private TitleScreenMixin(EvlieyeClient evlieye, Text text_1)
 	{
 		super(text_1);
 	}

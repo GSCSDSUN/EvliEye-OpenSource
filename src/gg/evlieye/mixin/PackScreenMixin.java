@@ -20,7 +20,7 @@ import gg.evlieye.EvlieyeClient;
 @Mixin(PackScreen.class)
 public class PackScreenMixin extends Screen
 {
-	private PackScreenMixin(EvlieyeClient wurst, Text title)
+	private PackScreenMixin(EvlieyeClient evlieye, Text title)
 	{
 		super(title);
 	}

@@ -15,7 +15,7 @@ import gg.evlieye.settings.EnumSetting;
 
 public final class FacingSetting extends EnumSetting<FacingSetting.Facing>
 {
-	protected static final EvlieyeClient WURST = EvlieyeClient.INSTANCE;
+	protected static final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
 	
 	public FacingSetting()
 	{
@@ -36,10 +36,10 @@ public final class FacingSetting extends EnumSetting<FacingSetting.Facing>
 		OFF("Off", v -> {}),
 		
 		SERVER("Server-side",
-			v -> WURST.getRotationFaker().faceVectorPacket(v)),
+			v -> evlieye.getRotationFaker().faceVectorPacket(v)),
 		
 		CLIENT("Client-side",
-			v -> WURST.getRotationFaker().faceVectorClient(v));
+			v -> evlieye.getRotationFaker().faceVectorClient(v));
 		
 		private String name;
 		private Consumer<Vec3d> face;

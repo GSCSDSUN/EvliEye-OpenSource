@@ -32,7 +32,7 @@ public abstract class ShulkerBoxScreenMixin
 		EvlieyeClient.INSTANCE.getHax().autoStealHack;
 	private int mode;
 	
-	public ShulkerBoxScreenMixin(EvlieyeClient wurst,
+	public ShulkerBoxScreenMixin(EvlieyeClient evlieye,
 		ShulkerBoxScreenHandler container, PlayerInventory playerInventory,
 		Text name)
 	{

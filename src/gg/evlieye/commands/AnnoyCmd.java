@@ -88,7 +88,7 @@ public final class AnnoyCmd extends Command implements ChatInputListener
 	public void onReceivedMessage(ChatInputEvent event)
 	{
 		String message = event.getComponent().getString();
-		if(message.startsWith(ChatUtils.WURST_PREFIX))
+		if(message.startsWith(ChatUtils.evlieye_PREFIX))
 			return;
 		
 		String prefix1 = target + ">";
@@ -110,7 +110,7 @@ public final class AnnoyCmd extends Command implements ChatInputListener
 		repeated = StringUtils.normalizeSpace(repeated);
 		
 		if(rcMode.isChecked() && repeated.startsWith("."))
-			WURST.getCmdProcessor().process(repeated.substring(1));
+			evlieye.getCmdProcessor().process(repeated.substring(1));
 		else
 			MC.getNetworkHandler().sendChatMessage(repeated);
 	}

@@ -43,7 +43,7 @@ public final class HelpCmd extends Command
 	
 	private void listCommands(int page) throws CmdException
 	{
-		ArrayList<Command> cmds = new ArrayList<>(WURST.getCmds().getAllCmds());
+		ArrayList<Command> cmds = new ArrayList<>(evlieye.getCmds().getAllCmds());
 		int pages = (int)Math.ceil(cmds.size() / (double)CMDS_PER_PAGE);
 		pages = Math.max(pages, 1);
 		
@@ -67,7 +67,7 @@ public final class HelpCmd extends Command
 		if(cmdName.startsWith("."))
 			cmdName = cmdName.substring(1);
 		
-		Command cmd = WURST.getCmds().getCmdByName(cmdName);
+		Command cmd = evlieye.getCmds().getCmdByName(cmdName);
 		if(cmd == null)
 			throw new CmdSyntaxError("Unknown command: ." + cmdName);
 		

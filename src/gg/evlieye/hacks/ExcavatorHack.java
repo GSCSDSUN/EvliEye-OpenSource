@@ -93,13 +93,13 @@ public final class ExcavatorHack extends Hack
 	{
 		// disable conflicting hacks
 		// TODO:
-		// WURST.getHax().bowAimbotMod.setEnabled(false);
-		// WURST.getHax().templateToolMod.setEnabled(false);
-		WURST.getHax().autoMineHack.setEnabled(false);
-		WURST.getHax().nukerHack.setEnabled(false);
-		WURST.getHax().nukerLegitHack.setEnabled(false);
-		WURST.getHax().speedNukerHack.setEnabled(false);
-		WURST.getHax().tunnellerHack.setEnabled(false);
+		// evlieye.getHax().bowAimbotMod.setEnabled(false);
+		// evlieye.getHax().templateToolMod.setEnabled(false);
+		evlieye.getHax().autoMineHack.setEnabled(false);
+		evlieye.getHax().nukerHack.setEnabled(false);
+		evlieye.getHax().nukerLegitHack.setEnabled(false);
+		evlieye.getHax().speedNukerHack.setEnabled(false);
+		evlieye.getHax().tunnellerHack.setEnabled(false);
 		
 		step = Step.START_POS;
 		
@@ -144,7 +144,7 @@ public final class ExcavatorHack extends Hack
 	{
 		if(pathFinder != null)
 		{
-			PathCmd pathCmd = WURST.getCmds().pathCmd;
+			PathCmd pathCmd = evlieye.getCmds().pathCmd;
 			pathFinder.renderPath(matrixStack, pathCmd.isDebugMode(),
 				pathCmd.isDepthTest());
 		}

@@ -33,7 +33,7 @@ public final class ProtectCmd extends Command
 		if(args.length != 1)
 			throw new CmdSyntaxError();
 		
-		ProtectHack protectHack = WURST.getHax().protectHack;
+		ProtectHack protectHack = evlieye.getHax().protectHack;
 		
 		if(protectHack.isEnabled())
 			protectHack.setEnabled(false);

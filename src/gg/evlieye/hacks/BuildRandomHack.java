@@ -88,7 +88,7 @@ public final class BuildRandomHack extends Hack
 	{
 		lastPos = null;
 		
-		if(WURST.getHax().freecamHack.isEnabled())
+		if(evlieye.getHax().freecamHack.isEnabled())
 			return;
 		
 		// check timer

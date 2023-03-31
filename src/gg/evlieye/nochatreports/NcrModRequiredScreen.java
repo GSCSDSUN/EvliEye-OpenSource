@@ -43,17 +43,17 @@ public final class NcrModRequiredScreen extends Screen
 	
 	public NcrModRequiredScreen(Screen prevScreen)
 	{
-		super(Text.literal(ChatUtils.WURST_PREFIX).append(
-			Text.translatable("gui.wurst.nochatreports.ncr_mod_server.title")));
+		super(Text.literal(ChatUtils.evlieye_PREFIX).append(
+			Text.translatable("gui.evlieye.nochatreports.ncr_mod_server.title")));
 		this.prevScreen = prevScreen;
 		
 		reason =
-			Text.translatable("gui.wurst.nochatreports.ncr_mod_server.message");
+			Text.translatable("gui.evlieye.nochatreports.ncr_mod_server.message");
 		
 		OtfList otfs = EvlieyeClient.INSTANCE.getOtfs();
 		
 		sigButtonMsg = () -> EvlieyeClient.INSTANCE
-			.translate("button.wurst.nochatreports.signatures_status")
+			.translate("button.evlieye.nochatreports.signatures_status")
 			+ blockedOrAllowed(otfs.noChatReportsOtf.isEnabled());
 		
 		vsButtonMsg =
@@ -69,7 +69,7 @@ public final class NcrModRequiredScreen extends Screen
 	private String blockedOrAllowed(boolean blocked)
 	{
 		return EvlieyeClient.INSTANCE.translate(
-			"gui.wurst.generic.allcaps_" + (blocked ? "blocked" : "allowed"));
+			"gui.evlieye.generic.allcaps_" + (blocked ? "blocked" : "allowed"));
 	}
 	
 	@Override

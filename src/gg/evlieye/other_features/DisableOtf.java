@@ -12,7 +12,7 @@ import gg.evlieye.SearchTags;
 import gg.evlieye.other_feature.OtherFeature;
 import gg.evlieye.settings.CheckboxSetting;
 
-@SearchTags({"turn off", "hide wurst logo", "ghost mode", "stealth mode",
+@SearchTags({"turn off", "hide evlieye logo", "ghost mode", "stealth mode",
 	"vanilla Minecraft"})
 @DontBlock
 public final class DisableOtf extends OtherFeature
@@ -33,6 +33,6 @@ public final class DisableOtf extends OtherFeature
 	
 	public boolean shouldHideEnableButton()
 	{
-		return !WURST.isEnabled() && hideEnableButton.isChecked();
+		return !evlieye.isEnabled() && hideEnableButton.isChecked();
 	}
 }

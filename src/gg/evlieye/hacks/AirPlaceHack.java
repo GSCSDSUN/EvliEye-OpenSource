@@ -32,7 +32,7 @@ public final class AirPlaceHack extends Hack implements RightClickListener
 	@Override
 	public void onEnable()
 	{
-		WURST.getHax().autoFishHack.setEnabled(false);
+		evlieye.getHax().autoFishHack.setEnabled(false);
 		
 		EVENTS.add(RightClickListener.class, this);
 	}

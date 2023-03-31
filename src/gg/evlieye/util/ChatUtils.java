@@ -21,7 +21,7 @@ public enum ChatUtils
 	
 	private static final MinecraftClient MC = EvlieyeClient.MC;
 	
-	public static final String WURST_PREFIX =
+	public static final String evlieye_PREFIX =
 		"\u00a7c[\u00a76Evlieye\u00a7c]\u00a7r ";
 	private static final String WARNING_PREFIX =
 		"\u00a7c[\u00a76\u00a7lWARNING\u00a7c]\u00a7r ";
@@ -43,7 +43,7 @@ public enum ChatUtils
 			return;
 		
 		ChatHud chatHud = MC.inGameHud.getChatHud();
-		MutableText prefix = Text.literal(WURST_PREFIX);
+		MutableText prefix = Text.literal(evlieye_PREFIX);
 		chatHud.addMessage(prefix.append(component));
 	}
 	

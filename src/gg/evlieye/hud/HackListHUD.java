@@ -40,7 +40,7 @@ public final class HackListHUD implements UpdateListener
 			return;
 		
 		if(otf.getPosition() == Position.LEFT
-			&& EvlieyeClient.INSTANCE.getOtfs().wurstLogoOtf.isVisible())
+			&& EvlieyeClient.INSTANCE.getOtfs().evlieyeLogoOtf.isVisible())
 			posY = 22;
 		else
 			posY = 2;

@@ -67,6 +67,6 @@ public final class IpCmd extends Command
 	@Override
 	public void doPrimaryAction()
 	{
-		WURST.getCmdProcessor().process("ip");
+		evlieye.getCmdProcessor().process("ip");
 	}
 }

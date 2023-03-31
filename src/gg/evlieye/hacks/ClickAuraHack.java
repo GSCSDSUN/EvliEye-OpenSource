@@ -70,15 +70,15 @@ public final class ClickAuraHack extends Hack
 	public void onEnable()
 	{
 		// disable other killauras
-		WURST.getHax().aimAssistHack.setEnabled(false);
-		WURST.getHax().crystalAuraHack.setEnabled(false);
-		WURST.getHax().fightBotHack.setEnabled(false);
-		WURST.getHax().killauraLegitHack.setEnabled(false);
-		WURST.getHax().killauraHack.setEnabled(false);
-		WURST.getHax().multiAuraHack.setEnabled(false);
-		WURST.getHax().protectHack.setEnabled(false);
-		WURST.getHax().triggerBotHack.setEnabled(false);
-		WURST.getHax().tpAuraHack.setEnabled(false);
+		evlieye.getHax().aimAssistHack.setEnabled(false);
+		evlieye.getHax().crystalAuraHack.setEnabled(false);
+		evlieye.getHax().fightBotHack.setEnabled(false);
+		evlieye.getHax().killauraLegitHack.setEnabled(false);
+		evlieye.getHax().killauraHack.setEnabled(false);
+		evlieye.getHax().multiAuraHack.setEnabled(false);
+		evlieye.getHax().protectHack.setEnabled(false);
+		evlieye.getHax().triggerBotHack.setEnabled(false);
+		evlieye.getHax().tpAuraHack.setEnabled(false);
 		
 		speed.resetTimer();
 		EVENTS.add(UpdateListener.class, this);
@@ -131,7 +131,7 @@ public final class ClickAuraHack extends Hack
 		if(target == null)
 			return;
 		
-		WURST.getHax().autoSwordHack.setSlot();
+		evlieye.getHax().autoSwordHack.setSlot();
 		
 		// face entity
 		Rotation rotation = RotationUtils
@@ -142,7 +142,7 @@ public final class ClickAuraHack extends Hack
 		MC.player.networkHandler.sendPacket(packet);
 		
 		// attack entity
-		WURST.getHax().criticalsHack.doCritical();
+		evlieye.getHax().criticalsHack.doCritical();
 		MC.interactionManager.attackEntity(player, target);
 		player.swingHand(Hand.MAIN_HAND);
 		speed.resetTimer();

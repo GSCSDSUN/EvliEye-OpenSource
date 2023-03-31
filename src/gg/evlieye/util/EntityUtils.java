@@ -23,7 +23,7 @@ public enum EntityUtils
 {
 	;
 	
-	protected static final EvlieyeClient WURST = EvlieyeClient.INSTANCE;
+	protected static final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
 	protected static final MinecraftClient MC = EvlieyeClient.MC;
 	
 	public static Stream<Entity> getAttackableEntities()
@@ -38,7 +38,7 @@ public enum EntityUtils
 			|| e instanceof EndCrystalEntity
 			|| e instanceof ShulkerBulletEntity)
 		&& e != MC.player && !(e instanceof FakePlayerEntity)
-		&& !WURST.getFriends().isFriend(e);
+		&& !evlieye.getFriends().isFriend(e);
 	
 	public static Stream<AnimalEntity> getValidAnimals()
 	{

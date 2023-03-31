@@ -26,10 +26,10 @@ public final class TacoCmd extends Command
 	implements GUIRenderListener, UpdateListener
 {
 	private final Identifier[] tacos =
-		{new Identifier("wurst", "dancingtaco1.png"),
-			new Identifier("wurst", "dancingtaco2.png"),
-			new Identifier("wurst", "dancingtaco3.png"),
-			new Identifier("wurst", "dancingtaco4.png")};
+		{new Identifier("evlieye", "dancingtaco1.png"),
+			new Identifier("evlieye", "dancingtaco2.png"),
+			new Identifier("evlieye", "dancingtaco3.png"),
+			new Identifier("evlieye", "dancingtaco4.png")};
 	
 	private boolean enabled;
 	private int ticks = 0;
@@ -70,7 +70,7 @@ public final class TacoCmd extends Command
 	@Override
 	public void doPrimaryAction()
 	{
-		WURST.getCmdProcessor().process("taco");
+		evlieye.getCmdProcessor().process("taco");
 	}
 	
 	@Override
@@ -89,9 +89,9 @@ public final class TacoCmd extends Command
 		GL11.glDisable(GL11.GL_CULL_FACE);
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		
-		if(WURST.getHax().rainbowUiHack.isEnabled())
+		if(evlieye.getHax().rainbowUiHack.isEnabled())
 		{
-			float[] acColor = WURST.getGui().getAcColor();
+			float[] acColor = evlieye.getGui().getAcColor();
 			RenderSystem.setShaderColor(acColor[0], acColor[1], acColor[2], 1);
 			
 		}else

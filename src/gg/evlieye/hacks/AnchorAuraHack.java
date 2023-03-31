@@ -389,7 +389,7 @@ public final class AnchorAuraHack extends Hack implements UpdateListener
 					&& ((LivingEntity)e).getHealth() > 0)
 				.filter(e -> e != MC.player)
 				.filter(e -> !(e instanceof FakePlayerEntity))
-				.filter(e -> !WURST.getFriends().contains(e.getEntityName()))
+				.filter(e -> !evlieye.getFriends().contains(e.getEntityName()))
 				.filter(e -> MC.player.squaredDistanceTo(e) <= rangeSq);
 		
 		stream = entityFilters.applyTo(stream);
@@ -459,7 +459,7 @@ public final class AnchorAuraHack extends Hack implements UpdateListener
 	
 	private boolean isSneaking()
 	{
-		return MC.player.isSneaking() || WURST.getHax().sneakHack.isEnabled();
+		return MC.player.isSneaking() || evlieye.getHax().sneakHack.isEnabled();
 	}
 	
 	private enum FaceBlocks
@@ -467,10 +467,10 @@ public final class AnchorAuraHack extends Hack implements UpdateListener
 		OFF("Off", v -> {}),
 		
 		SERVER("Server-side",
-			v -> WURST.getRotationFaker().faceVectorPacket(v)),
+			v -> evlieye.getRotationFaker().faceVectorPacket(v)),
 		
 		CLIENT("Client-side",
-			v -> WURST.getRotationFaker().faceVectorClient(v)),
+			v -> evlieye.getRotationFaker().faceVectorClient(v)),
 		
 		SPAM("Packet spam", v -> {
 			Rotation rotation = RotationUtils.getNeededRotations(v);

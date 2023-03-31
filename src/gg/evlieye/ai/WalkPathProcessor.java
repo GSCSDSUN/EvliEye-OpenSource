@@ -74,7 +74,7 @@ public class WalkPathProcessor extends PathProcessor
 			.getHorizontalAngleToLookVec(Vec3d.ofCenter(nextPos)))) > 90)
 			return;
 		
-		if(WURST.getHax().jesusHack.isEnabled())
+		if(evlieye.getHax().jesusHack.isEnabled())
 		{
 			// wait for Jesus to swim up
 			if(EvlieyeClient.MC.player.getY() < nextPos.getY()
@@ -86,7 +86,7 @@ public class WalkPathProcessor extends PathProcessor
 			if(EvlieyeClient.MC.player.getY() - nextPos.getY() > 0.5
 				&& (EvlieyeClient.MC.player.isTouchingWater()
 					|| EvlieyeClient.MC.player.isInLava()
-					|| WURST.getHax().jesusHack.isOverLiquid()))
+					|| evlieye.getHax().jesusHack.isOverLiquid()))
 				MC.options.sneakKey.setPressed(true);
 		}
 		
@@ -109,7 +109,7 @@ public class WalkPathProcessor extends PathProcessor
 				Block block = BlockUtils.getBlock(pos);
 				if(block instanceof LadderBlock || block instanceof VineBlock)
 				{
-					WURST.getRotationFaker().faceVectorClientIgnorePitch(
+					evlieye.getRotationFaker().faceVectorClientIgnorePitch(
 						BlockUtils.getBoundingBox(pos).getCenter());
 					
 					MC.options.forwardKey.setPressed(true);

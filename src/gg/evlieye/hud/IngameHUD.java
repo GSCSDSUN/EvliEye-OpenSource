@@ -19,7 +19,7 @@ import gg.evlieye.events.GUIRenderListener;
 
 public final class IngameHUD implements GUIRenderListener
 {
-	private final EvlieyeLogo wurstLogo = new EvlieyeLogo();
+	private final EvlieyeLogo evlieyeLogo = new EvlieyeLogo();
 	private final HackListHUD hackList = new HackListHUD();
 	private TabGui tabGui;
 	
@@ -40,7 +40,7 @@ public final class IngameHUD implements GUIRenderListener
 		
 		clickGui.updateColors();
 		
-		wurstLogo.render(matrixStack);
+		evlieyeLogo.render(matrixStack);
 		hackList.render(matrixStack, partialTicks);
 		tabGui.render(matrixStack, partialTicks);
 		

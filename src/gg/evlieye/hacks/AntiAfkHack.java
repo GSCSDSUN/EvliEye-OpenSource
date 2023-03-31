@@ -97,7 +97,7 @@ public final class AntiAfkHack extends Hack
 			if(timer > 0)
 			{
 				timer--;
-				if(!WURST.getHax().jesusHack.isEnabled())
+				if(!evlieye.getHax().jesusHack.isEnabled())
 					MC.options.jumpKey.setPressed(MC.player.isTouchingWater());
 				return;
 			}
@@ -149,7 +149,7 @@ public final class AntiAfkHack extends Hack
 			}
 			
 			// face block
-			WURST.getRotationFaker()
+			evlieye.getRotationFaker()
 				.faceVectorClientIgnorePitch(Vec3d.ofCenter(nextBlock));
 			
 			// walk
@@ -173,7 +173,7 @@ public final class AntiAfkHack extends Hack
 		if(!useAi.isChecked())
 			return;
 		
-		PathCmd pathCmd = WURST.getCmds().pathCmd;
+		PathCmd pathCmd = evlieye.getCmds().pathCmd;
 		RenderSystem.setShader(GameRenderer::getPositionProgram);
 		pathFinder.renderPath(matrixStack, pathCmd.isDebugMode(),
 			pathCmd.isDepthTest());

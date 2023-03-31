@@ -88,13 +88,13 @@ public final class FeedAuraHack extends Hack
 	protected void onEnable()
 	{
 		// disable other auras
-		WURST.getHax().clickAuraHack.setEnabled(false);
-		WURST.getHax().fightBotHack.setEnabled(false);
-		WURST.getHax().killauraLegitHack.setEnabled(false);
-		WURST.getHax().multiAuraHack.setEnabled(false);
-		WURST.getHax().protectHack.setEnabled(false);
-		WURST.getHax().triggerBotHack.setEnabled(false);
-		WURST.getHax().tpAuraHack.setEnabled(false);
+		evlieye.getHax().clickAuraHack.setEnabled(false);
+		evlieye.getHax().fightBotHack.setEnabled(false);
+		evlieye.getHax().killauraLegitHack.setEnabled(false);
+		evlieye.getHax().multiAuraHack.setEnabled(false);
+		evlieye.getHax().protectHack.setEnabled(false);
+		evlieye.getHax().triggerBotHack.setEnabled(false);
+		evlieye.getHax().tpAuraHack.setEnabled(false);
 		
 		EVENTS.add(UpdateListener.class, this);
 		EVENTS.add(PostMotionListener.class, this);
@@ -145,7 +145,7 @@ public final class FeedAuraHack extends Hack
 		if(target == null)
 			return;
 		
-		WURST.getRotationFaker()
+		evlieye.getRotationFaker()
 			.faceVectorPacket(target.getBoundingBox().getCenter());
 	}
 	

@@ -21,7 +21,7 @@ public class ArmorItemMixin extends Item implements IArmorItem
 	@Shadow
 	protected float toughness;
 	
-	private ArmorItemMixin(EvlieyeClient wurst, Settings item$Settings_1)
+	private ArmorItemMixin(EvlieyeClient evlieye, Settings item$Settings_1)
 	{
 		super(item$Settings_1);
 	}

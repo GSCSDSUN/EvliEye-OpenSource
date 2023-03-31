@@ -47,23 +47,23 @@ public final class ForcedChatReportsScreen extends Screen
 	
 	public ForcedChatReportsScreen(Screen prevScreen)
 	{
-		super(Text.literal(ChatUtils.WURST_PREFIX).append(
-			Text.translatable("gui.wurst.nochatreports.unsafe_server.title")));
+		super(Text.literal(ChatUtils.evlieye_PREFIX).append(
+			Text.translatable("gui.evlieye.nochatreports.unsafe_server.title")));
 		this.prevScreen = prevScreen;
 		
 		reason =
-			Text.translatable("gui.wurst.nochatreports.unsafe_server.message");
+			Text.translatable("gui.evlieye.nochatreports.unsafe_server.message");
 		
 		NoChatReportsOtf ncr = EvlieyeClient.INSTANCE.getOtfs().noChatReportsOtf;
 		sigButtonMsg = () -> EvlieyeClient.INSTANCE
-			.translate("button.wurst.nochatreports.signatures_status")
+			.translate("button.evlieye.nochatreports.signatures_status")
 			+ blockedOrAllowed(ncr.isEnabled());
 	}
 	
 	private String blockedOrAllowed(boolean blocked)
 	{
 		return EvlieyeClient.INSTANCE.translate(
-			"gui.wurst.generic.allcaps_" + (blocked ? "blocked" : "allowed"));
+			"gui.evlieye.generic.allcaps_" + (blocked ? "blocked" : "allowed"));
 	}
 	
 	@Override

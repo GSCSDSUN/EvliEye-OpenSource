@@ -27,20 +27,20 @@ import gg.evlieye.util.RenderUtils;
 
 public class PathFinder
 {
-	private final EvlieyeClient wurst = EvlieyeClient.INSTANCE;
+	private final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
 	
 	private final boolean invulnerable =
 		EvlieyeClient.MC.player.getAbilities().creativeMode;
 	private final boolean creativeFlying =
 		EvlieyeClient.MC.player.getAbilities().flying;
 	protected final boolean flying =
-		creativeFlying || wurst.getHax().flightHack.isEnabled();
+		creativeFlying || evlieye.getHax().flightHack.isEnabled();
 	private final boolean immuneToFallDamage =
-		invulnerable || wurst.getHax().noFallHack.isEnabled();
+		invulnerable || evlieye.getHax().noFallHack.isEnabled();
 	private final boolean noWaterSlowdown =
-		wurst.getHax().antiWaterPushHack.isPreventingSlowdown();
-	private final boolean jesus = wurst.getHax().jesusHack.isEnabled();
-	private final boolean spider = wurst.getHax().spiderHack.isEnabled();
+		evlieye.getHax().antiWaterPushHack.isPreventingSlowdown();
+	private final boolean jesus = evlieye.getHax().jesusHack.isEnabled();
+	private final boolean spider = evlieye.getHax().spiderHack.isEnabled();
 	protected boolean fallingAllowed = true;
 	protected boolean divingAllowed = true;
 	
@@ -624,13 +624,13 @@ public class PathFinder
 		// check player abilities
 		if(invulnerable != EvlieyeClient.MC.player.getAbilities().creativeMode
 			|| flying != (creativeFlying
-				|| wurst.getHax().flightHack.isEnabled())
+				|| evlieye.getHax().flightHack.isEnabled())
 			|| immuneToFallDamage != (invulnerable
-				|| wurst.getHax().noFallHack.isEnabled())
-			|| noWaterSlowdown != wurst.getHax().antiWaterPushHack
+				|| evlieye.getHax().noFallHack.isEnabled())
+			|| noWaterSlowdown != evlieye.getHax().antiWaterPushHack
 				.isPreventingSlowdown()
-			|| jesus != wurst.getHax().jesusHack.isEnabled()
-			|| spider != wurst.getHax().spiderHack.isEnabled())
+			|| jesus != evlieye.getHax().jesusHack.isEnabled()
+			|| spider != evlieye.getHax().spiderHack.isEnabled())
 			return false;
 		
 		// if index is zero, check if first pos is safe

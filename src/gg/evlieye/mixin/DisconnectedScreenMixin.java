@@ -39,7 +39,7 @@ public class DisconnectedScreenMixin extends Screen
 	@Shadow
 	private int reasonHeight;
 	
-	private DisconnectedScreenMixin(EvlieyeClient wurst, Text title)
+	private DisconnectedScreenMixin(EvlieyeClient evlieye, Text title)
 	{
 		super(title);
 	}

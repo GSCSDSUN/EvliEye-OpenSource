@@ -111,7 +111,7 @@ public abstract class GameRendererMixin
 			target = "Lnet/minecraft/util/math/MathHelper;lerp(FFF)F",
 			ordinal = 0),
 		method = "renderWorld(FJLnet/minecraft/client/util/math/MatrixStack;)V")
-	private float wurstNauseaLerp(float delta, float first, float second)
+	private float evlieyeNauseaLerp(float delta, float first, float second)
 	{
 		if(!EvlieyeClient.INSTANCE.getHax().antiWobbleHack.isEnabled())
 			return MathHelper.lerp(delta, first, second);

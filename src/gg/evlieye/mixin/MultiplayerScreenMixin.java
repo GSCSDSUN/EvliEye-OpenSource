@@ -33,7 +33,7 @@ public class MultiplayerScreenMixin extends Screen implements IMultiplayerScreen
 	
 	private ButtonWidget lastServerButton;
 	
-	private MultiplayerScreenMixin(EvlieyeClient wurst, Text text_1)
+	private MultiplayerScreenMixin(EvlieyeClient evlieye, Text text_1)
 	{
 		super(text_1);
 	}

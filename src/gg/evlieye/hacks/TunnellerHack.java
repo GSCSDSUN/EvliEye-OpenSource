@@ -115,15 +115,15 @@ public final class TunnellerHack extends Hack
 	@Override
 	public void onEnable()
 	{
-		WURST.getHax().autoMineHack.setEnabled(false);
-		WURST.getHax().excavatorHack.setEnabled(false);
-		WURST.getHax().fightBotHack.setEnabled(false);
-		WURST.getHax().followHack.setEnabled(false);
-		WURST.getHax().instantBunkerHack.setEnabled(false);
-		WURST.getHax().nukerHack.setEnabled(false);
-		WURST.getHax().nukerLegitHack.setEnabled(false);
-		WURST.getHax().protectHack.setEnabled(false);
-		WURST.getHax().speedNukerHack.setEnabled(false);
+		evlieye.getHax().autoMineHack.setEnabled(false);
+		evlieye.getHax().excavatorHack.setEnabled(false);
+		evlieye.getHax().fightBotHack.setEnabled(false);
+		evlieye.getHax().followHack.setEnabled(false);
+		evlieye.getHax().instantBunkerHack.setEnabled(false);
+		evlieye.getHax().nukerHack.setEnabled(false);
+		evlieye.getHax().nukerLegitHack.setEnabled(false);
+		evlieye.getHax().protectHack.setEnabled(false);
+		evlieye.getHax().speedNukerHack.setEnabled(false);
 		
 		// add listeners
 		EVENTS.add(UpdateListener.class, this);
@@ -170,7 +170,7 @@ public final class TunnellerHack extends Hack
 	@Override
 	public void onUpdate()
 	{
-		HackList hax = WURST.getHax();
+		HackList hax = evlieye.getHax();
 		Hack[] incompatibleHax = {hax.autoSwitchHack, hax.autoToolHack,
 			hax.autoWalkHack, hax.blinkHack, hax.flightHack,
 			hax.scaffoldWalkHack, hax.sneakHack};
@@ -448,7 +448,7 @@ public final class TunnellerHack extends Hack
 				return;
 			}
 			
-			WURST.getHax().autoToolHack.equipBestTool(currentBlock, false, true,
+			evlieye.getHax().autoToolHack.equipBestTool(currentBlock, false, true,
 				0);
 			breakBlock(currentBlock);
 			
@@ -484,7 +484,7 @@ public final class TunnellerHack extends Hack
 		{
 			BlockPos base = start.offset(direction, length);
 			Vec3d vec = Vec3d.ofCenter(base);
-			WURST.getRotationFaker().faceVectorClientIgnorePitch(vec);
+			evlieye.getRotationFaker().faceVectorClientIgnorePitch(vec);
 			
 			MC.options.forwardKey.setPressed(true);
 		}
@@ -566,7 +566,7 @@ public final class TunnellerHack extends Hack
 				placeBlockSimple(pos);
 			else
 			{
-				WURST.getHax().autoToolHack.equipBestTool(pos, false, true, 0);
+				evlieye.getHax().autoToolHack.equipBestTool(pos, false, true, 0);
 				breakBlock(pos);
 			}
 		}
@@ -692,7 +692,7 @@ public final class TunnellerHack extends Hack
 			BlockPos pos1 = start.offset(direction, (int)dotProduct);
 			if(!player.equals(pos1))
 			{
-				WURST.getRotationFaker()
+				evlieye.getRotationFaker()
 					.faceVectorClientIgnorePitch(toVec3d(pos1));
 				forward.setPressed(true);
 				return;
@@ -701,7 +701,7 @@ public final class TunnellerHack extends Hack
 			BlockPos pos2 = start.offset(direction, Math.max(0, length - 10));
 			if(!player.equals(pos2))
 			{
-				WURST.getRotationFaker()
+				evlieye.getRotationFaker()
 					.faceVectorClientIgnorePitch(toVec3d(pos2));
 				forward.setPressed(true);
 				MC.player.setSprinting(true);
@@ -709,7 +709,7 @@ public final class TunnellerHack extends Hack
 			}
 			
 			BlockPos pos3 = start.offset(direction, length + 1);
-			WURST.getRotationFaker().faceVectorClientIgnorePitch(toVec3d(pos3));
+			evlieye.getRotationFaker().faceVectorClientIgnorePitch(toVec3d(pos3));
 			forward.setPressed(false);
 			MC.player.setSprinting(false);
 			
@@ -889,7 +889,7 @@ public final class TunnellerHack extends Hack
 		Vec3d hitVec = hitVecs[side.ordinal()];
 		
 		// face block
-		WURST.getRotationFaker().faceVectorPacket(hitVec);
+		evlieye.getRotationFaker().faceVectorPacket(hitVec);
 		if(RotationUtils.getAngleToLastReportedLookVec(hitVec) > 1)
 			return;
 		
@@ -961,7 +961,7 @@ public final class TunnellerHack extends Hack
 		}
 		
 		// face block
-		WURST.getRotationFaker().faceVectorPacket(hitVecs[side.ordinal()]);
+		evlieye.getRotationFaker().faceVectorPacket(hitVecs[side.ordinal()]);
 		
 		// damage block
 		if(!MC.interactionManager.updateBlockBreakingProgress(pos, side))

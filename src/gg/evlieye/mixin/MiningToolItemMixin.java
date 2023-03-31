@@ -33,7 +33,7 @@ public class MiningToolItemMixin extends ToolItem implements IMiningToolItem
 	@Final
 	private Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 	
-	private MiningToolItemMixin(EvlieyeClient wurst, ToolMaterial material,
+	private MiningToolItemMixin(EvlieyeClient evlieye, ToolMaterial material,
 		Settings settings)
 	{
 		super(material, settings);

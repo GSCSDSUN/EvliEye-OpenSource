@@ -25,7 +25,7 @@ public enum BlockPlacer
 {
 	;
 	
-	private static final EvlieyeClient WURST = EvlieyeClient.INSTANCE;
+	private static final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
 	private static final MinecraftClient MC = EvlieyeClient.MC;
 	private static final IMinecraftClient IMC = EvlieyeClient.IMC;
 	
@@ -36,7 +36,7 @@ public enum BlockPlacer
 			return false;
 		
 		// face block
-		WURST.getRotationFaker().faceVectorPacket(params.hitVec);
+		evlieye.getRotationFaker().faceVectorPacket(params.hitVec);
 		
 		// place block
 		IMC.getInteractionManager().rightClickBlock(params.neighbor,

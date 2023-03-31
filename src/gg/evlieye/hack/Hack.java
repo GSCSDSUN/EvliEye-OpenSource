@@ -28,7 +28,7 @@ public abstract class Hack extends Feature
 	public Hack(String name)
 	{
 		this.name = Objects.requireNonNull(name);
-		description = "description.wurst.hack." + name.toLowerCase();
+		description = "description.evlieye.hack." + name.toLowerCase();
 		addPossibleKeybind(name, "Toggle " + name);
 	}
 	
@@ -46,7 +46,7 @@ public abstract class Hack extends Feature
 	@Override
 	public final String getDescription()
 	{
-		return WURST.translate(description);
+		return evlieye.translate(description);
 	}
 	
 	@Override
@@ -71,14 +71,14 @@ public abstract class Hack extends Feature
 		if(this.enabled == enabled)
 			return;
 		
-		TooManyHaxHack tooManyHax = WURST.getHax().tooManyHaxHack;
+		TooManyHaxHack tooManyHax = evlieye.getHax().tooManyHaxHack;
 		if(enabled && tooManyHax.isEnabled() && tooManyHax.isBlocked(this))
 			return;
 		
 		this.enabled = enabled;
 		
 		if(!(this instanceof NavigatorHack || this instanceof ClickGuiHack))
-			WURST.getHud().getHackList().updateState(this);
+			evlieye.getHud().getHackList().updateState(this);
 		
 		if(enabled)
 			onEnable();
@@ -86,7 +86,7 @@ public abstract class Hack extends Feature
 			onDisable();
 		
 		if(stateSaved)
-			WURST.getHax().saveEnabledHax();
+			evlieye.getHax().saveEnabledHax();
 	}
 	
 	@Override

@@ -71,7 +71,7 @@ public abstract class MessageCompleter
 			String message = ChatUtils.getAsString(chatHistory.get(i));
 			
 			// filter out Evlieye messages so the model won't admit it's hacking
-			if(message.startsWith(ChatUtils.WURST_PREFIX))
+			if(message.startsWith(ChatUtils.evlieye_PREFIX))
 				continue;
 			
 			// give non-player messages a sender to avoid confusing the model
@@ -117,7 +117,7 @@ public abstract class MessageCompleter
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type", "application/json");
 		conn.setRequestProperty("Authorization",
-			"Bearer " + System.getenv("WURST_OPENAI_KEY"));
+			"Bearer " + System.getenv("evlieye_OPENAI_KEY"));
 		
 		// set the request body
 		conn.setDoOutput(true);

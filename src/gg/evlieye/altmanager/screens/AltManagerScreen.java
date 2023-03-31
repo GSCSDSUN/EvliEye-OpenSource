@@ -90,9 +90,9 @@ public final class AltManagerScreen extends Screen
 		if(folderException != null && shouldAsk)
 		{
 			Text title =
-				Text.translatable("gui.wurst.altmanager.folder_error.title");
+				Text.translatable("gui.evlieye.altmanager.folder_error.title");
 			Text message = Text.translatable(
-				"gui.wurst.altmanager.folder_error.message", folderException);
+				"gui.evlieye.altmanager.folder_error.message", folderException);
 			Text buttonText = Text.translatable("gui.done");
 			
 			// This just sets shouldAsk to false and closes the message.
@@ -104,9 +104,9 @@ public final class AltManagerScreen extends Screen
 			
 		}else if(altManager.getList().isEmpty() && shouldAsk)
 		{
-			Text title = Text.translatable("gui.wurst.altmanager.empty.title");
+			Text title = Text.translatable("gui.evlieye.altmanager.empty.title");
 			Text message =
-				Text.translatable("gui.wurst.altmanager.empty.message");
+				Text.translatable("gui.evlieye.altmanager.empty.message");
 			BooleanConsumer callback = this::confirmGenerate;
 			
 			ConfirmScreen screen = new ConfirmScreen(callback, title, message);
@@ -550,7 +550,7 @@ public final class AltManagerScreen extends Screen
 	{
 		// translate
 		String translated = EvlieyeClient.INSTANCE
-			.translate("description.wurst.altmanager." + trKey);
+			.translate("description.evlieye.altmanager." + trKey);
 		
 		// line-wrap
 		StringJoiner joiner = new StringJoiner("\n");

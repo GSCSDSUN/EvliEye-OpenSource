@@ -33,7 +33,7 @@ public class SwordItemMixin extends ToolItem implements ISwordItem
 	@Final
 	private Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 	
-	private SwordItemMixin(EvlieyeClient wurst, ToolMaterial material,
+	private SwordItemMixin(EvlieyeClient evlieye, ToolMaterial material,
 		Settings settings)
 	{
 		super(material, settings);

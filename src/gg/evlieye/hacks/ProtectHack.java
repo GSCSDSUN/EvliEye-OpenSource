@@ -100,19 +100,19 @@ public final class ProtectHack extends Hack
 	@Override
 	public void onEnable()
 	{
-		WURST.getHax().followHack.setEnabled(false);
-		WURST.getHax().tunnellerHack.setEnabled(false);
+		evlieye.getHax().followHack.setEnabled(false);
+		evlieye.getHax().tunnellerHack.setEnabled(false);
 		
 		// disable other killauras
-		WURST.getHax().aimAssistHack.setEnabled(false);
-		WURST.getHax().clickAuraHack.setEnabled(false);
-		WURST.getHax().crystalAuraHack.setEnabled(false);
-		WURST.getHax().fightBotHack.setEnabled(false);
-		WURST.getHax().killauraLegitHack.setEnabled(false);
-		WURST.getHax().killauraHack.setEnabled(false);
-		WURST.getHax().multiAuraHack.setEnabled(false);
-		WURST.getHax().triggerBotHack.setEnabled(false);
-		WURST.getHax().tpAuraHack.setEnabled(false);
+		evlieye.getHax().aimAssistHack.setEnabled(false);
+		evlieye.getHax().clickAuraHack.setEnabled(false);
+		evlieye.getHax().crystalAuraHack.setEnabled(false);
+		evlieye.getHax().fightBotHack.setEnabled(false);
+		evlieye.getHax().killauraLegitHack.setEnabled(false);
+		evlieye.getHax().killauraHack.setEnabled(false);
+		evlieye.getHax().multiAuraHack.setEnabled(false);
+		evlieye.getHax().triggerBotHack.setEnabled(false);
+		evlieye.getHax().tpAuraHack.setEnabled(false);
 		
 		// set friend
 		if(friend == null)
@@ -211,7 +211,7 @@ public final class ProtectHack extends Hack
 			if(!pathFinder.isDone() && !pathFinder.isFailed())
 			{
 				PathProcessor.lockControls();
-				WURST.getRotationFaker()
+				evlieye.getRotationFaker()
 					.faceVectorClient(target.getBoundingBox().getCenter());
 				pathFinder.think();
 				pathFinder.formatPath();
@@ -237,7 +237,7 @@ public final class ProtectHack extends Hack
 			// control height if flying
 			if(!MC.player.isOnGround()
 				&& (MC.player.getAbilities().flying
-					|| WURST.getHax().flightHack.isEnabled())
+					|| evlieye.getHax().flightHack.isEnabled())
 				&& MC.player.squaredDistanceTo(target.getX(), MC.player.getY(),
 					target.getZ()) <= MC.player.squaredDistanceTo(
 						MC.player.getX(), target.getY(), MC.player.getZ()))
@@ -253,7 +253,7 @@ public final class ProtectHack extends Hack
 			}
 			
 			// follow target
-			WURST.getRotationFaker()
+			evlieye.getRotationFaker()
 				.faceVectorClient(target.getBoundingBox().getCenter());
 			MC.options.forwardKey.setPressed(MC.player.distanceTo(
 				target) > (target == friend ? distanceF : distanceE));
@@ -261,14 +261,14 @@ public final class ProtectHack extends Hack
 		
 		if(target == enemy)
 		{
-			WURST.getHax().autoSwordHack.setSlot();
+			evlieye.getHax().autoSwordHack.setSlot();
 			
 			// check cooldown
 			if(!speed.isTimeToAttack())
 				return;
 			
 			// attack enemy
-			WURST.getHax().criticalsHack.doCritical();
+			evlieye.getHax().criticalsHack.doCritical();
 			MC.interactionManager.attackEntity(MC.player, enemy);
 			MC.player.swingHand(Hand.MAIN_HAND);
 			speed.resetTimer();
@@ -281,7 +281,7 @@ public final class ProtectHack extends Hack
 		if(!useAi.isChecked())
 			return;
 		
-		PathCmd pathCmd = WURST.getCmds().pathCmd;
+		PathCmd pathCmd = evlieye.getCmds().pathCmd;
 		pathFinder.renderPath(matrixStack, pathCmd.isDebugMode(),
 			pathCmd.isDepthTest());
 	}

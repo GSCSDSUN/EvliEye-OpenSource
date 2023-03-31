@@ -54,7 +54,7 @@ public final class GoToCmd extends Command
 		// set PathFinder
 		if(args.length == 1 && args[0].equals("-path"))
 		{
-			BlockPos goal = WURST.getCmds().pathCmd.getLastGoal();
+			BlockPos goal = evlieye.getCmds().pathCmd.getLastGoal();
 			if(goal == null)
 				throw new CmdError("No previous position on .path.");
 			pathFinder = new PathFinder(goal);
@@ -172,7 +172,7 @@ public final class GoToCmd extends Command
 	@Override
 	public void onRender(MatrixStack matrixStack, float partialTicks)
 	{
-		PathCmd pathCmd = WURST.getCmds().pathCmd;
+		PathCmd pathCmd = evlieye.getCmds().pathCmd;
 		pathFinder.renderPath(matrixStack, pathCmd.isDebugMode(),
 			pathCmd.isDepthTest());
 	}

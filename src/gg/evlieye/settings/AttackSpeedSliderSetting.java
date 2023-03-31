@@ -15,7 +15,7 @@ public final class AttackSpeedSliderSetting extends SliderSetting
 	
 	public AttackSpeedSliderSetting()
 	{
-		this("Speed", "description.wurst.setting.generic.attack_speed");
+		this("Speed", "description.evlieye.setting.generic.attack_speed");
 	}
 	
 	public AttackSpeedSliderSetting(String name, String description)

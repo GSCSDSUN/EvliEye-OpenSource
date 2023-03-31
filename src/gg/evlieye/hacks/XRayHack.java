@@ -129,7 +129,7 @@ public final class XRayHack extends Hack implements UpdateListener,
 		
 		// TODO: Why does this use 0.5 instead of
 		// FullBright's defaultGamma setting?
-		if(!WURST.getHax().fullbrightHack.isEnabled())
+		if(!evlieye.getHax().fullbrightHack.isEnabled())
 			gammaOption.forceSetValue(0.5);
 	}
 	

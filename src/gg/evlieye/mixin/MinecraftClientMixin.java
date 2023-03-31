@@ -74,10 +74,10 @@ public abstract class MinecraftClientMixin
 	@Final
 	private YggdrasilAuthenticationService authenticationService;
 	
-	private Session wurstSession;
-	private ProfileKeysImpl wurstProfileKeys;
+	private Session evlieyeSession;
+	private ProfileKeysImpl evlieyeProfileKeys;
 	
-	private MinecraftClientMixin(EvlieyeClient wurst, String string_1)
+	private MinecraftClientMixin(EvlieyeClient evlieye, String string_1)
 	{
 		super(string_1);
 	}
@@ -125,10 +125,10 @@ public abstract class MinecraftClientMixin
 		cancellable = true)
 	private void onGetSession(CallbackInfoReturnable<Session> cir)
 	{
-		if(wurstSession == null)
+		if(evlieyeSession == null)
 			return;
 		
-		cir.setReturnValue(wurstSession);
+		cir.setReturnValue(evlieyeSession);
 	}
 	
 	@Redirect(at = @At(value = "FIELD",
@@ -139,8 +139,8 @@ public abstract class MinecraftClientMixin
 			"getSessionProperties()Lcom/mojang/authlib/properties/PropertyMap;"})
 	private Session getSessionForSessionProperties(MinecraftClient mc)
 	{
-		if(wurstSession != null)
-			return wurstSession;
+		if(evlieyeSession != null)
+			return evlieyeSession;
 		
 		return session;
 	}
@@ -153,10 +153,10 @@ public abstract class MinecraftClientMixin
 		if(EvlieyeClient.INSTANCE.getOtfs().noChatReportsOtf.isActive())
 			cir.setReturnValue(ProfileKeys.MISSING);
 		
-		if(wurstProfileKeys == null)
+		if(evlieyeProfileKeys == null)
 			return;
 		
-		cir.setReturnValue(wurstProfileKeys);
+		cir.setReturnValue(evlieyeProfileKeys);
 	}
 	
 	@Inject(at = @At("HEAD"),
@@ -225,16 +225,16 @@ public abstract class MinecraftClientMixin
 	@Override
 	public void setSession(Session session)
 	{
-		wurstSession = session;
+		evlieyeSession = session;
 		
 		UserApiService userApiService =
-			wurst_createUserApiService(session.getAccessToken());
-		UUID uuid = wurstSession.getProfile().getId();
-		wurstProfileKeys =
+			evlieye_createUserApiService(session.getAccessToken());
+		UUID uuid = evlieyeSession.getProfile().getId();
+		evlieyeProfileKeys =
 			new ProfileKeysImpl(userApiService, uuid, runDirectory.toPath());
 	}
 	
-	private UserApiService wurst_createUserApiService(String accessToken)
+	private UserApiService evlieye_createUserApiService(String accessToken)
 	{
 		try
 		{

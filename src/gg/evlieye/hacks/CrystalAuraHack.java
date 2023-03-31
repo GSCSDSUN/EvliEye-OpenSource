@@ -99,15 +99,15 @@ public final class CrystalAuraHack extends Hack implements UpdateListener
 	public void onEnable()
 	{
 		// disable other killauras
-		WURST.getHax().aimAssistHack.setEnabled(false);
-		WURST.getHax().clickAuraHack.setEnabled(false);
-		WURST.getHax().fightBotHack.setEnabled(false);
-		WURST.getHax().killauraHack.setEnabled(false);
-		WURST.getHax().killauraLegitHack.setEnabled(false);
-		WURST.getHax().multiAuraHack.setEnabled(false);
-		WURST.getHax().protectHack.setEnabled(false);
-		WURST.getHax().triggerBotHack.setEnabled(false);
-		WURST.getHax().tpAuraHack.setEnabled(false);
+		evlieye.getHax().aimAssistHack.setEnabled(false);
+		evlieye.getHax().clickAuraHack.setEnabled(false);
+		evlieye.getHax().fightBotHack.setEnabled(false);
+		evlieye.getHax().killauraHack.setEnabled(false);
+		evlieye.getHax().killauraLegitHack.setEnabled(false);
+		evlieye.getHax().multiAuraHack.setEnabled(false);
+		evlieye.getHax().protectHack.setEnabled(false);
+		evlieye.getHax().triggerBotHack.setEnabled(false);
+		evlieye.getHax().tpAuraHack.setEnabled(false);
 		
 		EVENTS.add(UpdateListener.class, this);
 	}
@@ -305,7 +305,7 @@ public final class CrystalAuraHack extends Hack implements UpdateListener
 					&& ((LivingEntity)e).getHealth() > 0)
 				.filter(e -> e != MC.player)
 				.filter(e -> !(e instanceof FakePlayerEntity))
-				.filter(e -> !WURST.getFriends().contains(e.getEntityName()))
+				.filter(e -> !evlieye.getFriends().contains(e.getEntityName()))
 				.filter(e -> MC.player.squaredDistanceTo(e) <= rangeSq);
 		
 		stream = entityFilters.applyTo(stream);
@@ -363,10 +363,10 @@ public final class CrystalAuraHack extends Hack implements UpdateListener
 		OFF("Off", v -> {}),
 		
 		SERVER("Server-side",
-			v -> WURST.getRotationFaker().faceVectorPacket(v)),
+			v -> evlieye.getRotationFaker().faceVectorPacket(v)),
 		
 		CLIENT("Client-side",
-			v -> WURST.getRotationFaker().faceVectorClient(v)),
+			v -> evlieye.getRotationFaker().faceVectorClient(v)),
 		
 		SPAM("Packet spam", v -> {
 			Rotation rotation = RotationUtils.getNeededRotations(v);

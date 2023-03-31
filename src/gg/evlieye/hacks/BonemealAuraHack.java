@@ -105,7 +105,7 @@ public final class BonemealAuraHack extends Hack implements UpdateListener
 			return;
 		
 		// wait for AutoFarm
-		if(WURST.getHax().autoFarmHack.isBusy())
+		if(evlieye.getHax().autoFarmHack.isBusy())
 			return;
 		
 		// check held item
@@ -252,7 +252,7 @@ public final class BonemealAuraHack extends Hack implements UpdateListener
 				continue;
 			
 			// face block
-			WURST.getRotationFaker().faceVectorPacket(hitVec);
+			evlieye.getRotationFaker().faceVectorPacket(hitVec);
 			
 			// place block
 			IMC.getInteractionManager().rightClickBlock(pos, side, hitVec);

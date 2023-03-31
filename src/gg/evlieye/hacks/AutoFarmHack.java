@@ -132,7 +132,7 @@ public final class AutoFarmHack extends Hack
 		List<BlockPos> blocksToHarvest = new ArrayList<>();
 		List<BlockPos> blocksToReplant = new ArrayList<>();
 		
-		if(!WURST.getHax().freecamHack.isEnabled())
+		if(!evlieye.getHax().freecamHack.isEnabled())
 		{
 			blocksToHarvest = getBlocksToHarvest(eyesVec, blocks);
 			
@@ -445,7 +445,7 @@ public final class AutoFarmHack extends Hack
 		Vec3d hitVec = hitVecs[side.ordinal()];
 		
 		// face block
-		WURST.getRotationFaker().faceVectorPacket(hitVec);
+		evlieye.getRotationFaker().faceVectorPacket(hitVec);
 		if(RotationUtils.getAngleToLastReportedLookVec(hitVec) > 1)
 			return;
 		

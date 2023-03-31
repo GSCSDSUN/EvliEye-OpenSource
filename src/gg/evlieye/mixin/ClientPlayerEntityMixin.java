@@ -58,7 +58,7 @@ public class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 	
 	private Screen tempCurrentScreen;
 	
-	public ClientPlayerEntityMixin(EvlieyeClient wurst, ClientWorld world,
+	public ClientPlayerEntityMixin(EvlieyeClient evlieye, ClientWorld world,
 		GameProfile profile)
 	{
 		super(world, profile);
@@ -75,7 +75,7 @@ public class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 	@Redirect(at = @At(value = "INVOKE",
 		target = "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingItem()Z",
 		ordinal = 0), method = "tickMovement()V")
-	private boolean wurstIsUsingItem(ClientPlayerEntity player)
+	private boolean evlieyeIsUsingItem(ClientPlayerEntity player)
 	{
 		if(EvlieyeClient.INSTANCE.getHax().noSlowdownHack.isEnabled())
 			return false;

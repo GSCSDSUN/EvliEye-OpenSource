@@ -18,7 +18,7 @@ import gg.evlieye.mixinterface.IKeyBinding;
 
 public abstract class PathProcessor
 {
-	protected static final EvlieyeClient WURST = EvlieyeClient.INSTANCE;
+	protected static final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
 	protected static final MinecraftClient MC = EvlieyeClient.MC;
 	
 	private static final KeyBinding[] CONTROLS =
@@ -57,7 +57,7 @@ public abstract class PathProcessor
 	
 	protected final void facePosition(BlockPos pos)
 	{
-		WURST.getRotationFaker()
+		evlieye.getRotationFaker()
 			.faceVectorClientIgnorePitch(Vec3d.ofCenter(pos));
 	}
 	

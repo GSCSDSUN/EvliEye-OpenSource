@@ -23,6 +23,6 @@ public final class BindCmd extends Command
 	@Override
 	public void call(String[] args) throws CmdException
 	{
-		WURST.getCmdProcessor().process("binds add " + String.join(" ", args));
+		evlieye.getCmdProcessor().process("binds add " + String.join(" ", args));
 	}
 }

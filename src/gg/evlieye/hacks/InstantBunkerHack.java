@@ -63,7 +63,7 @@ public final class InstantBunkerHack extends Hack
 	@Override
 	public void onEnable()
 	{
-		WURST.getHax().tunnellerHack.setEnabled(false);
+		evlieye.getHax().tunnellerHack.setEnabled(false);
 		
 		if(!MC.player.isOnGround())
 		{
@@ -142,7 +142,7 @@ public final class InstantBunkerHack extends Hack
 		
 		// place next block
 		// if(blockIndex < positions.size() && (IMC.getItemUseCooldown() == 0
-		// || WURST.getHax().fastPlaceHack.isEnabled()))
+		// || evlieye.getHax().fastPlaceHack.isEnabled()))
 		// {
 		// BlockPos pos = positions.get(blockIndex);
 		//
@@ -223,7 +223,7 @@ public final class InstantBunkerHack extends Hack
 		Vec3d hitVec = hitVecs[side.ordinal()];
 		
 		// face block
-		// WURST.getRotationFaker().faceVectorPacket(hitVec);
+		// evlieye.getRotationFaker().faceVectorPacket(hitVec);
 		// if(RotationUtils.getAngleToLastReportedLookVec(hitVec) > 1)
 		// return;
 		

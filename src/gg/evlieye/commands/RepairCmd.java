@@ -69,6 +69,6 @@ public final class RepairCmd extends Command
 	@Override
 	public void doPrimaryAction()
 	{
-		WURST.getCmdProcessor().process("repair");
+		evlieye.getCmdProcessor().process("repair");
 	}
 }

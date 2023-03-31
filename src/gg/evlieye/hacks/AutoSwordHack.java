@@ -99,7 +99,7 @@ public final class AutoSwordHack extends Hack implements UpdateListener
 			return;
 		
 		// wait for AutoEat
-		if(WURST.getHax().autoEatHack.isEating())
+		if(evlieye.getHax().autoEatHack.isEating())
 			return;
 		
 		// find best weapon

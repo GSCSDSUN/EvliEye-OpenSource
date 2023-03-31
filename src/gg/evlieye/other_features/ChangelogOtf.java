@@ -14,7 +14,7 @@ import gg.evlieye.EvlieyeClient;
 import gg.evlieye.other_feature.OtherFeature;
 import gg.evlieye.update.Version;
 
-@SearchTags({"change log", "wurst update", "release notes", "what's new",
+@SearchTags({"change log", "evlieye update", "release notes", "what's new",
 	"what is new", "new features", "recently added features"})
 @DontBlock
 public final class ChangelogOtf extends OtherFeature

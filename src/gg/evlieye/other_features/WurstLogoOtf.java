@@ -16,7 +16,7 @@ import gg.evlieye.other_feature.OtherFeature;
 import gg.evlieye.settings.ColorSetting;
 import gg.evlieye.settings.EnumSetting;
 
-@SearchTags({"wurst logo", "top left corner"})
+@SearchTags({"evlieye logo", "top left corner"})
 @DontBlock
 public final class EvlieyeLogoOtf extends OtherFeature
 {
@@ -59,7 +59,7 @@ public final class EvlieyeLogoOtf extends OtherFeature
 		ALWAYS("Always", () -> true),
 		
 		ONLY_OUTDATED("Only when outdated",
-			() -> WURST.getUpdater().isOutdated());
+			() -> evlieye.getUpdater().isOutdated());
 		
 		private final String name;
 		private final BooleanSupplier visible;

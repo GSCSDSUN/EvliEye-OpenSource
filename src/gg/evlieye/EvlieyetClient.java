@@ -79,7 +79,7 @@ public enum EvlieyeClient
 	private static boolean guiInitialized;
 	private EvlieyeUpdater updater;
 	private ProblematicResourcePackDetector problematicPackDetector;
-	private Path wurstFolder;
+	private Path evlieyeFolder;
 	
 	private KeyBinding zoomKey;
 	
@@ -89,38 +89,38 @@ public enum EvlieyeClient
 		
 		MC = MinecraftClient.getInstance();
 		IMC = (IMinecraftClient)MC;
-		wurstFolder = createEvlieyeFolder();
+		evlieyeFolder = createEvlieyeFolder();
 		
 		String trackingID = "UA-52838431-5";
 		String hostname = "client.evlieye.gg";
-		Path analyticsFile = wurstFolder.resolve("analytics.json");
+		Path analyticsFile = evlieyeFolder.resolve("analytics.json");
 		analytics = new EvlieyeAnalytics(trackingID, hostname, analyticsFile);
 		
 		eventManager = new EventManager(this);
 		
-		Path enabledHacksFile = wurstFolder.resolve("enabled-hacks.json");
+		Path enabledHacksFile = evlieyeFolder.resolve("enabled-hacks.json");
 		hax = new HackList(enabledHacksFile);
 		
 		cmds = new CmdList();
 		
 		otfs = new OtfList();
 		
-		Path settingsFile = wurstFolder.resolve("settings.json");
-		settingsProfileFolder = wurstFolder.resolve("settings");
+		Path settingsFile = evlieyeFolder.resolve("settings.json");
+		settingsProfileFolder = evlieyeFolder.resolve("settings");
 		this.settingsFile = new SettingsFile(settingsFile, hax, cmds, otfs);
 		this.settingsFile.load();
 		hax.tooManyHaxHack.loadBlockedHacksFile();
 		
-		Path keybindsFile = wurstFolder.resolve("keybinds.json");
+		Path keybindsFile = evlieyeFolder.resolve("keybinds.json");
 		keybinds = new KeybindList(keybindsFile);
 		
-		Path guiFile = wurstFolder.resolve("windows.json");
+		Path guiFile = evlieyeFolder.resolve("windows.json");
 		gui = new ClickGui(guiFile);
 		
-		Path preferencesFile = wurstFolder.resolve("preferences.json");
+		Path preferencesFile = evlieyeFolder.resolve("preferences.json");
 		navigator = new Navigator(preferencesFile, hax, cmds, otfs);
 		
-		Path friendsFile = wurstFolder.resolve("friends.json");
+		Path friendsFile = evlieyeFolder.resolve("friends.json");
 		friends = new FriendsList(friendsFile);
 		friends.load();
 		
@@ -144,13 +144,13 @@ public enum EvlieyeClient
 		problematicPackDetector = new ProblematicResourcePackDetector();
 		problematicPackDetector.start();
 		
-		Path altsFile = wurstFolder.resolve("alts.encrypted_json");
+		Path altsFile = evlieyeFolder.resolve("alts.encrypted_json");
 		Path encFolder =
 			Paths.get(System.getProperty("user.home"), ".Evlieye encryption")
 				.normalize();
 		altManager = new AltManager(altsFile, encFolder);
 		
-		zoomKey = new KeyBinding("key.wurst.zoom", InputUtil.Type.KEYSYM,
+		zoomKey = new KeyBinding("key.evlieye.zoom", InputUtil.Type.KEYSYM,
 			GLFW.GLFW_KEY_V, "Zoom");
 		KeyBindingHelper.registerKeyBinding(zoomKey);
 		
@@ -161,19 +161,19 @@ public enum EvlieyeClient
 	private Path createEvlieyeFolder()
 	{
 		Path dotMinecraftFolder = MC.runDirectory.toPath().normalize();
-		Path wurstFolder = dotMinecraftFolder.resolve("wurst");
+		Path evlieyeFolder = dotMinecraftFolder.resolve("evlieye");
 		
 		try
 		{
-			Files.createDirectories(wurstFolder);
+			Files.createDirectories(evlieyeFolder);
 			
 		}catch(IOException e)
 		{
 			throw new RuntimeException(
-				"Couldn't create .minecraft/wurst folder.", e);
+				"Couldn't create .minecraft/evlieye folder.", e);
 		}
 		
-		return wurstFolder;
+		return evlieyeFolder;
 	}
 	
 	public String translate(String key)
@@ -331,7 +331,7 @@ public enum EvlieyeClient
 	
 	public Path getEvlieyeFolder()
 	{
-		return wurstFolder;
+		return evlieyeFolder;
 	}
 	
 	public KeyBinding getZoomKey()

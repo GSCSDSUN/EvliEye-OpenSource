@@ -70,11 +70,11 @@ public class FriendsCmd extends Command
 			throw new CmdSyntaxError();
 		
 		String name = args[1];
-		if(WURST.getFriends().contains(name))
+		if(evlieye.getFriends().contains(name))
 			throw new CmdError(
 				"\"" + name + "\" is already in your friends list.");
 		
-		WURST.getFriends().addAndSave(name);
+		evlieye.getFriends().addAndSave(name);
 		ChatUtils.message("Added friend \"" + name + "\".");
 	}
 	
@@ -84,10 +84,10 @@ public class FriendsCmd extends Command
 			throw new CmdSyntaxError();
 		
 		String name = args[1];
-		if(!WURST.getFriends().contains(name))
+		if(!evlieye.getFriends().contains(name))
 			throw new CmdError("\"" + name + "\" is not in your friends list.");
 		
-		WURST.getFriends().removeAndSave(name);
+		evlieye.getFriends().removeAndSave(name);
 		ChatUtils.message("Removed friend \"" + name + "\".");
 	}
 	
@@ -96,7 +96,7 @@ public class FriendsCmd extends Command
 		if(args.length > 1)
 			throw new CmdSyntaxError();
 		
-		WURST.getFriends().removeAllAndSave();
+		evlieye.getFriends().removeAllAndSave();
 		ChatUtils.message("All friends removed. Oof.");
 	}
 	
@@ -105,7 +105,7 @@ public class FriendsCmd extends Command
 		if(args.length > 2)
 			throw new CmdSyntaxError();
 		
-		ArrayList<String> friends = WURST.getFriends().toList();
+		ArrayList<String> friends = evlieye.getFriends().toList();
 		int page = parsePage(args);
 		int pages = (int)Math.ceil(friends.size() / (double)FRIENDS_PER_PAGE);
 		pages = Math.max(pages, 1);

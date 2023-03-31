@@ -67,10 +67,10 @@ public abstract class ClientPlayNetworkHandlerMixin
 		}
 		
 		// Add an honest warning toast on unsafe servers
-		MutableText title = Text.literal(ChatUtils.WURST_PREFIX).append(
-			Text.translatable("toast.wurst.nochatreports.unsafe_server.title"));
+		MutableText title = Text.literal(ChatUtils.evlieye_PREFIX).append(
+			Text.translatable("toast.evlieye.nochatreports.unsafe_server.title"));
 		MutableText message = Text
-			.translatable("toast.wurst.nochatreports.unsafe_server.message");
+			.translatable("toast.evlieye.nochatreports.unsafe_server.message");
 		
 		SystemToast systemToast = SystemToast.create(client,
 			SystemToast.Type.UNSECURE_SERVER_WARNING, title, message);

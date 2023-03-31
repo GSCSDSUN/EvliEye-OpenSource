@@ -27,7 +27,7 @@ public enum BlockBreaker
 {
 	;
 	
-	private static final EvlieyeClient WURST = EvlieyeClient.INSTANCE;
+	private static final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
 	private static final MinecraftClient MC = EvlieyeClient.MC;
 	
 	public static boolean breakOneBlock(BlockPos pos)
@@ -37,7 +37,7 @@ public enum BlockBreaker
 			return false;
 		
 		// face block
-		WURST.getRotationFaker().faceVectorPacket(params.hitVec);
+		evlieye.getRotationFaker().faceVectorPacket(params.hitVec);
 		
 		// damage block
 		if(!MC.interactionManager.updateBlockBreakingProgress(pos, params.side))

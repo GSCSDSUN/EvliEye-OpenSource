@@ -50,7 +50,7 @@ public final class ZoomOtf extends OtherFeature implements MouseScrollListener
 		if(currentLevel == null)
 			currentLevel = level.getValue();
 		
-		if(!WURST.getZoomKey().isPressed())
+		if(!evlieye.getZoomKey().isPressed())
 		{
 			currentLevel = level.getValue();
 			
@@ -78,7 +78,7 @@ public final class ZoomOtf extends OtherFeature implements MouseScrollListener
 	@Override
 	public void onMouseScroll(double amount)
 	{
-		if(!WURST.getZoomKey().isPressed() || !scroll.isChecked())
+		if(!evlieye.getZoomKey().isPressed() || !scroll.isChecked())
 			return;
 		
 		if(currentLevel == null)

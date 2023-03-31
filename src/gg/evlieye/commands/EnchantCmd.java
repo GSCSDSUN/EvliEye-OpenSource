@@ -79,6 +79,6 @@ public final class EnchantCmd extends Command
 	@Override
 	public void doPrimaryAction()
 	{
-		WURST.getCmdProcessor().process("enchant");
+		evlieye.getCmdProcessor().process("enchant");
 	}
 }

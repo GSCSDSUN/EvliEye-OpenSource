@@ -21,7 +21,7 @@ public final class UnbindCmd extends Command
 	@Override
 	public void call(String[] args) throws CmdException
 	{
-		WURST.getCmdProcessor()
+		evlieye.getCmdProcessor()
 			.process("binds remove " + String.join(" ", args));
 	}
 }

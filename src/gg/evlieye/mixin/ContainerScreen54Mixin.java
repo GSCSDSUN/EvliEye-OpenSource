@@ -36,7 +36,7 @@ public abstract class ContainerScreen54Mixin
 		EvlieyeClient.INSTANCE.getHax().autoStealHack;
 	private int mode;
 	
-	public ContainerScreen54Mixin(EvlieyeClient wurst,
+	public ContainerScreen54Mixin(EvlieyeClient evlieye,
 		GenericContainerScreenHandler container,
 		PlayerInventory playerInventory, Text name)
 	{

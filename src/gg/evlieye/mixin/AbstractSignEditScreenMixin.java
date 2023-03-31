@@ -27,7 +27,7 @@ public abstract class AbstractSignEditScreenMixin extends Screen
 	@Final
 	private String[] text;
 	
-	private AbstractSignEditScreenMixin(EvlieyeClient wurst, Text text_1)
+	private AbstractSignEditScreenMixin(EvlieyeClient evlieye, Text text_1)
 	{
 		super(text_1);
 	}

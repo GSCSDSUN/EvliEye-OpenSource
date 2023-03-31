@@ -26,7 +26,7 @@ import gg.evlieye.mixinterface.IScreen;
 @Mixin(StatsScreen.class)
 public abstract class StatsScreenMixin extends Screen implements StatsListener
 {
-	private StatsScreenMixin(EvlieyeClient wurst, Text text_1)
+	private StatsScreenMixin(EvlieyeClient evlieye, Text text_1)
 	{
 		super(text_1);
 	}
@@ -62,16 +62,16 @@ public abstract class StatsScreenMixin extends Screen implements StatsListener
 	
 	private void toggleEvlieye(ButtonWidget button)
 	{
-		EvlieyeClient wurst = EvlieyeClient.INSTANCE;
-		wurst.setEnabled(!wurst.isEnabled());
+		EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
+		evlieye.setEnabled(!evlieye.isEnabled());
 		
 		updateEvlieyeButtonText(button);
 	}
 	
 	private void updateEvlieyeButtonText(ButtonWidget button)
 	{
-		EvlieyeClient wurst = EvlieyeClient.INSTANCE;
-		String text = (wurst.isEnabled() ? "Disable" : "Enable") + " Evlieye";
+		EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
+		String text = (evlieye.isEnabled() ? "Disable" : "Enable") + " Evlieye";
 		button.setMessage(Text.literal(text));
 	}
 }

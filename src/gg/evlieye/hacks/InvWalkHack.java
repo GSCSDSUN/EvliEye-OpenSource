@@ -31,11 +31,11 @@ public final class InvWalkHack extends Hack implements UpdateListener
 {
 	private final CheckboxSetting allowClickGUI =
 		new CheckboxSetting("Allow ClickGUI",
-			"description.wurst.setting.invwalk.allow_clickgui", true);
+			"description.evlieye.setting.invwalk.allow_clickgui", true);
 	
 	private final CheckboxSetting allowOther =
 		new CheckboxSetting("Allow other screens",
-			"description.wurst.setting.invwalk.allow_other", true);
+			"description.evlieye.setting.invwalk.allow_other", true);
 	
 	private final CheckboxSetting allowSneak =
 		new CheckboxSetting("Allow sneak key", true);

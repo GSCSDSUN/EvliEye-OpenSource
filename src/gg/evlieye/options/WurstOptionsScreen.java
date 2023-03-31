@@ -53,13 +53,13 @@ public class EvlieyeOptionsScreen extends Screen
 	
 	private void addSettingButtons()
 	{
-		EvlieyeClient wurst = EvlieyeClient.INSTANCE;
-		FriendsCmd friendsCmd = wurst.getCmds().friendsCmd;
+		EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
+		FriendsCmd friendsCmd = evlieye.getCmds().friendsCmd;
 		CheckboxSetting middleClickFriends = friendsCmd.getMiddleClickFriends();
-		EvlieyeAnalytics analytics = wurst.getAnalytics();
-		VanillaSpoofOtf vanillaSpoofOtf = wurst.getOtfs().vanillaSpoofOtf;
+		EvlieyeAnalytics analytics = evlieye.getAnalytics();
+		VanillaSpoofOtf vanillaSpoofOtf = evlieye.getOtfs().vanillaSpoofOtf;
 		CheckboxSetting forceEnglish =
-			wurst.getOtfs().translationsOtf.getForceEnglish();
+			evlieye.getOtfs().translationsOtf.getForceEnglish();
 		
 		new EvlieyeOptionsButton(-154, 24,
 			() -> "Click Friends: "
@@ -126,7 +126,7 @@ public class EvlieyeOptionsScreen extends Screen
 		
 		new EvlieyeOptionsButton(54, 48, () -> "Evlieye Wiki", "Evlieye.Wiki",
 			b -> os.open(
-				"https://wurst.wiki/?utm_source=Evlieye+Client&utm_medium=Evlieye+Options&utm_content=Evlieye+Wiki"));
+				"https://evlieye.wiki/?utm_source=Evlieye+Client&utm_medium=Evlieye+Options&utm_content=Evlieye+Wiki"));
 		
 		new EvlieyeOptionsButton(54, 72, () -> "Twitter", "@Evlieye_Imperium",
 			b -> os.open("https://www.evlieye.gg/twitter/"));

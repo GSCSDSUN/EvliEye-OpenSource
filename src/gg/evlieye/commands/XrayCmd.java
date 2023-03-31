@@ -22,7 +22,7 @@ public final class XrayCmd extends Command
 	@Override
 	public void call(String[] args) throws CmdException
 	{
-		WURST.getCmdProcessor()
+		evlieye.getCmdProcessor()
 			.process("blocklist X-Ray Ores " + String.join(" ", args));
 	}
 }

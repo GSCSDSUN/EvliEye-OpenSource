@@ -34,12 +34,12 @@ import gg.evlieye.options.EvlieyeOptionsScreen;
 @Mixin(GameMenuScreen.class)
 public abstract class GameMenuScreenMixin extends Screen
 {
-	private static final Identifier wurstTexture =
-		new Identifier("wurst", "wurst_128.png");
+	private static final Identifier evlieyeTexture =
+		new Identifier("evlieye", "evlieye_128.png");
 	
-	private ButtonWidget wurstOptionsButton;
+	private ButtonWidget evlieyeOptionsButton;
 	
-	private GameMenuScreenMixin(EvlieyeClient wurst, Text text_1)
+	private GameMenuScreenMixin(EvlieyeClient evlieye, Text text_1)
 	{
 		super(text_1);
 	}
@@ -82,11 +82,11 @@ public abstract class GameMenuScreenMixin extends Screen
 				CrashReport.create(new IllegalStateException(),
 					"Someone deleted the Feedback button!"));
 		
-		wurstOptionsButton = ButtonWidget
+		evlieyeOptionsButton = ButtonWidget
 			.builder(Text.literal("            Options"),
 				b -> openEvlieyeOptions())
 			.dimensions(width / 2 - 102, buttonY, 204, 20).build();
-		buttons.add(wurstOptionsButton);
+		buttons.add(evlieyeOptionsButton);
 	}
 	
 	private boolean isFeedbackButton(ClickableWidget button)
@@ -115,7 +115,7 @@ public abstract class GameMenuScreenMixin extends Screen
 	private void onRender(MatrixStack matrixStack, int mouseX, int mouseY,
 		float partialTicks, CallbackInfo ci)
 	{
-		if(!EvlieyeClient.INSTANCE.isEnabled() || wurstOptionsButton == null)
+		if(!EvlieyeClient.INSTANCE.isEnabled() || evlieyeOptionsButton == null)
 			return;
 		
 		GL11.glEnable(GL11.GL_CULL_FACE);
@@ -125,10 +125,10 @@ public abstract class GameMenuScreenMixin extends Screen
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		
-		RenderSystem.setShaderTexture(0, wurstTexture);
+		RenderSystem.setShaderTexture(0, evlieyeTexture);
 		
-		int x = wurstOptionsButton.getX() + 34;
-		int y = wurstOptionsButton.getY() + 2;
+		int x = evlieyeOptionsButton.getX() + 34;
+		int y = evlieyeOptionsButton.getY() + 2;
 		int w = 63;
 		int h = 16;
 		int fw = 63;

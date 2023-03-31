@@ -25,8 +25,8 @@ import gg.evlieye.settings.Setting;
 
 public abstract class Feature
 {
-	protected static final EvlieyeClient WURST = EvlieyeClient.INSTANCE;
-	protected static final EventManager EVENTS = WURST.getEventManager();
+	protected static final EvlieyeClient evlieye = EvlieyeClient.INSTANCE;
+	protected static final EventManager EVENTS = evlieye.getEventManager();
 	protected static final MinecraftClient MC = EvlieyeClient.MC;
 	protected static final IMinecraftClient IMC = EvlieyeClient.IMC;
 	

@@ -37,7 +37,7 @@ public final class BindsCmd extends Command
 			".binds load-profile <file>", ".binds save-profile <file>",
 			".binds list-profiles [<page>]", ".binds remove-all",
 			".binds reset", "Multiple hacks/commands must be separated by ';'.",
-			"Profiles are saved in '.minecraft/wurst/keybinds'.");
+			"Profiles are saved in '.minecraft/evlieye/keybinds'.");
 	}
 	
 	@Override
@@ -95,7 +95,7 @@ public final class BindsCmd extends Command
 		String[] cmdArgs = Arrays.copyOfRange(args, 2, args.length);
 		String commands = String.join(" ", cmdArgs);
 		
-		WURST.getKeybinds().add(key, commands);
+		evlieye.getKeybinds().add(key, commands);
 		ChatUtils.message("Keybind set: " + displayKey + " -> " + commands);
 	}
 	
@@ -107,11 +107,11 @@ public final class BindsCmd extends Command
 		String displayKey = args[1];
 		String key = parseKey(displayKey);
 		
-		String commands = WURST.getKeybinds().getCommands(key);
+		String commands = evlieye.getKeybinds().getCommands(key);
 		if(commands == null)
 			throw new CmdError("Nothing to remove.");
 		
-		WURST.getKeybinds().remove(key);
+		evlieye.getKeybinds().remove(key);
 		ChatUtils.message("Keybind removed: " + displayKey + " -> " + commands);
 	}
 	
@@ -139,7 +139,7 @@ public final class BindsCmd extends Command
 		if(args.length > 2)
 			throw new CmdSyntaxError();
 		
-		List<Keybind> binds = WURST.getKeybinds().getAllKeybinds();
+		List<Keybind> binds = evlieye.getKeybinds().getAllKeybinds();
 		int page = parsePage(args);
 		int pages = (int)Math.ceil(binds.size() / 8.0);
 		pages = Math.max(pages, 1);
@@ -172,13 +172,13 @@ public final class BindsCmd extends Command
 	
 	private void removeAll()
 	{
-		WURST.getKeybinds().removeAll();
+		evlieye.getKeybinds().removeAll();
 		ChatUtils.message("All keybinds removed.");
 	}
 	
 	private void reset()
 	{
-		WURST.getKeybinds().setKeybinds(KeybindList.DEFAULT_KEYBINDS);
+		evlieye.getKeybinds().setKeybinds(KeybindList.DEFAULT_KEYBINDS);
 		ChatUtils.message("All keybinds reset to defaults.");
 	}
 	
@@ -191,7 +191,7 @@ public final class BindsCmd extends Command
 		
 		try
 		{
-			WURST.getKeybinds().loadProfile(name);
+			evlieye.getKeybinds().loadProfile(name);
 			ChatUtils.message("Keybinds loaded: " + name);
 			
 		}catch(NoSuchFileException e)
@@ -220,7 +220,7 @@ public final class BindsCmd extends Command
 		
 		try
 		{
-			WURST.getKeybinds().saveProfile(name);
+			evlieye.getKeybinds().saveProfile(name);
 			ChatUtils.message("Keybinds saved: " + name);
 			
 		}catch(IOException | JsonException e)
@@ -244,7 +244,7 @@ public final class BindsCmd extends Command
 		if(args.length > 2)
 			throw new CmdSyntaxError();
 		
-		ArrayList<Path> files = WURST.getKeybinds().listProfiles();
+		ArrayList<Path> files = evlieye.getKeybinds().listProfiles();
 		int page = parsePage(args);
 		int pages = (int)Math.ceil(files.size() / 8.0);
 		pages = Math.max(pages, 1);

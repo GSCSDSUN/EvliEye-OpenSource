@@ -71,8 +71,8 @@ public final class FlightHack extends Hack
 	{
 		tickCounter = 0;
 		
-		WURST.getHax().creativeFlightHack.setEnabled(false);
-		WURST.getHax().jetpackHack.setEnabled(false);
+		evlieye.getHax().creativeFlightHack.setEnabled(false);
+		evlieye.getHax().jetpackHack.setEnabled(false);
 		
 		EVENTS.add(UpdateListener.class, this);
 		EVENTS.add(IsPlayerInWaterListener.class, this);

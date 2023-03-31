@@ -29,7 +29,7 @@ public final class SettingsCmd extends Command
 		super("settings", "Allows you to make profiles of your settings.",
 			".settings load-profile <file>", ".settings save-profile <file>",
 			".settings list-profiles [<page>]",
-			"Profiles are saved in '.minecraft/wurst/settings'.");
+			"Profiles are saved in '.minecraft/evlieye/settings'.");
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public final class SettingsCmd extends Command
 		
 		try
 		{
-			WURST.loadSettingsProfile(name);
+			evlieye.loadSettingsProfile(name);
 			ChatUtils.message("Settings loaded: " + name);
 			
 		}catch(NoSuchFileException e)
@@ -95,7 +95,7 @@ public final class SettingsCmd extends Command
 		
 		try
 		{
-			WURST.saveSettingsProfile(name);
+			evlieye.saveSettingsProfile(name);
 			ChatUtils.message("Settings saved: " + name);
 			
 		}catch(IOException | JsonException e)
@@ -119,7 +119,7 @@ public final class SettingsCmd extends Command
 		if(args.length > 2)
 			throw new CmdSyntaxError();
 		
-		ArrayList<Path> files = WURST.listSettingsProfiles();
+		ArrayList<Path> files = evlieye.listSettingsProfiles();
 		int page = parsePage(args);
 		int pages = (int)Math.ceil(files.size() / 8.0);
 		pages = Math.max(pages, 1);

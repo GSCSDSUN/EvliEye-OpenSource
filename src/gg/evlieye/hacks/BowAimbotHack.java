@@ -177,7 +177,7 @@ public final class BowAimbotHack extends Hack
 		
 		// set pitch
 		if(Float.isNaN(neededPitch))
-			WURST.getRotationFaker()
+			evlieye.getRotationFaker()
 				.faceVectorClient(target.getBoundingBox().getCenter());
 		else
 			MC.player.setPitch(neededPitch);

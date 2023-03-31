@@ -28,7 +28,7 @@ public class DirectConnectScreenMixin extends Screen
 	@Final
 	private ServerInfo serverEntry;
 	
-	private DirectConnectScreenMixin(EvlieyeClient wurst, Text text_1)
+	private DirectConnectScreenMixin(EvlieyeClient evlieye, Text text_1)
 	{
 		super(text_1);
 	}

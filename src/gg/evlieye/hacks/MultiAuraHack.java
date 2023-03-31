@@ -63,15 +63,15 @@ public final class MultiAuraHack extends Hack implements UpdateListener
 	public void onEnable()
 	{
 		// disable other killauras
-		WURST.getHax().aimAssistHack.setEnabled(false);
-		WURST.getHax().clickAuraHack.setEnabled(false);
-		WURST.getHax().crystalAuraHack.setEnabled(false);
-		WURST.getHax().fightBotHack.setEnabled(false);
-		WURST.getHax().killauraLegitHack.setEnabled(false);
-		WURST.getHax().killauraHack.setEnabled(false);
-		WURST.getHax().protectHack.setEnabled(false);
-		WURST.getHax().tpAuraHack.setEnabled(false);
-		WURST.getHax().triggerBotHack.setEnabled(false);
+		evlieye.getHax().aimAssistHack.setEnabled(false);
+		evlieye.getHax().clickAuraHack.setEnabled(false);
+		evlieye.getHax().crystalAuraHack.setEnabled(false);
+		evlieye.getHax().fightBotHack.setEnabled(false);
+		evlieye.getHax().killauraLegitHack.setEnabled(false);
+		evlieye.getHax().killauraHack.setEnabled(false);
+		evlieye.getHax().protectHack.setEnabled(false);
+		evlieye.getHax().tpAuraHack.setEnabled(false);
+		evlieye.getHax().triggerBotHack.setEnabled(false);
 		
 		speed.resetTimer();
 		EVENTS.add(UpdateListener.class, this);
@@ -111,7 +111,7 @@ public final class MultiAuraHack extends Hack implements UpdateListener
 		if(entities.isEmpty())
 			return;
 		
-		WURST.getHax().autoSwordHack.setSlot();
+		evlieye.getHax().autoSwordHack.setSlot();
 		
 		// attack entities
 		for(Entity entity : entities)
@@ -123,7 +123,7 @@ public final class MultiAuraHack extends Hack implements UpdateListener
 				new PlayerMoveC2SPacket.LookAndOnGround(rotations.getYaw(),
 					rotations.getPitch(), MC.player.isOnGround()));
 			
-			WURST.getHax().criticalsHack.doCritical();
+			evlieye.getHax().criticalsHack.doCritical();
 			MC.interactionManager.attackEntity(player, entity);
 		}
 		
