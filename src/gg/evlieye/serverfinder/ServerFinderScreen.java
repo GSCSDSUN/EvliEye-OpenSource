@@ -55,7 +55,7 @@ public class ServerFinderScreen extends Screen
 			ButtonWidget
 				.builder(Text.literal("Tutorial"),
 					b -> Util.getOperatingSystem().open(
-						"https://www.wurstclient.net/serverfinder-tutorial/"))
+						"https://www.evlieye.gg/serverfinder-tutorial/"))
 				.dimensions(width / 2 - 100, height / 4 + 120 + 12, 200, 20)
 				.build());
 		

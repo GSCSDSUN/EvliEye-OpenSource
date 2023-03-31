@@ -141,7 +141,7 @@ public final class NavigatorMainScreen extends NavigatorScreen
 		// Feature feature = navigatorDisplayList.get(hoveredFeature);
 		// if(feature.getHelpPage().isEmpty())
 		// return;
-		// MiscUtils.openLink("https://www.wurstclient.net/wiki/"
+		// MiscUtils.openLink("https://www.evlieye.gg/wiki/"
 		// + feature.getHelpPage() + "/");
 		// EvlieyeClient wurst = EvlieyeClient.INSTANCE;
 		// wurst.navigator.addPreference(feature.getName());

@@ -117,7 +117,7 @@ public final class NavigatorFeatureScreen extends NavigatorScreen
 		// method_37063(new ButtonWidget(
 		// width / 2 + (hasPrimaryAction ? 2 : -151), height - 65,
 		// hasPrimaryAction ? 149 : 302, 20, "Help", b -> {
-		// MiscUtils.openLink("https://www.wurstclient.net/wiki/"
+		// MiscUtils.openLink("https://www.evlieye.gg/wiki/"
 		// + feature.getHelpPage() + "/");
 		// wurst.navigator.analytics.trackEvent("help", "open",
 		// feature.getName());

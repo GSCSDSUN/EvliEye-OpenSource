@@ -122,21 +122,21 @@ public class EvlieyeOptionsScreen extends Screen
 		
 		new EvlieyeOptionsButton(54, 24, () -> "Official Website",
 			"EvlieyeClient.net", b -> os.open(
-				"https://www.wurstclient.net/?utm_source=Evlieye+Client&utm_medium=Evlieye+Options&utm_content=Official+Website"));
+				"https://www.evlieye.gg/?utm_source=Evlieye+Client&utm_medium=Evlieye+Options&utm_content=Official+Website"));
 		
 		new EvlieyeOptionsButton(54, 48, () -> "Evlieye Wiki", "Evlieye.Wiki",
 			b -> os.open(
 				"https://wurst.wiki/?utm_source=Evlieye+Client&utm_medium=Evlieye+Options&utm_content=Evlieye+Wiki"));
 		
 		new EvlieyeOptionsButton(54, 72, () -> "Twitter", "@Evlieye_Imperium",
-			b -> os.open("https://www.wurstclient.net/twitter/"));
+			b -> os.open("https://www.evlieye.gg/twitter/"));
 		
 		new EvlieyeOptionsButton(54, 96, () -> "Reddit", "r/EvlieyeClient",
-			b -> os.open("https://www.wurstclient.net/reddit/"));
+			b -> os.open("https://www.evlieye.gg/reddit/"));
 		
 		new EvlieyeOptionsButton(54, 120, () -> "Donate",
 			"EvlieyeClient.net/donate", b -> os.open(
-				"https://www.wurstclient.net/donate/?utm_source=Evlieye+Client&utm_medium=Evlieye+Options&utm_content=Donate"));
+				"https://www.evlieye.gg/donate/?utm_source=Evlieye+Client&utm_medium=Evlieye+Options&utm_content=Donate"));
 	}
 	
 	@Override

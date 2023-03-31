@@ -145,7 +145,7 @@ public class PlayerSkinProviderMixin
 		try
 		{
 			// TODO: download capes to file
-			URL url = new URL("https://www.wurstclient.net/api/v1/capes.json");
+			URL url = new URL("https://www.evlieye.gg/api/v1/capes.json");
 			
 			capes =
 				JsonParser.parseReader(new InputStreamReader(url.openStream()))
@@ -154,7 +154,7 @@ public class PlayerSkinProviderMixin
 		}catch(Exception e)
 		{
 			System.err
-				.println("[Evlieye] Failed to load capes from wurstclient.net!");
+				.println("[Evlieye] Failed to load capes from evlieye.gg!");
 			
 			e.printStackTrace();
 		}

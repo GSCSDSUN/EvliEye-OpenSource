@@ -178,7 +178,7 @@ public class ForceOpDialog extends JDialog
 	{
 		try
 		{
-			String howToLink = "https://www.wurstclient.net/forceop-tutorial/";
+			String howToLink = "https://www.evlieye.gg/forceop-tutorial/";
 			
 			Desktop.getDesktop().browse(URI.create(howToLink));
 			

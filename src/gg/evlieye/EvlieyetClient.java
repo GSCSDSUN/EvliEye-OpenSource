@@ -92,7 +92,7 @@ public enum EvlieyeClient
 		wurstFolder = createEvlieyeFolder();
 		
 		String trackingID = "UA-52838431-5";
-		String hostname = "client.wurstclient.net";
+		String hostname = "client.evlieye.gg";
 		Path analyticsFile = wurstFolder.resolve("analytics.json");
 		analytics = new EvlieyeAnalytics(trackingID, hostname, analyticsFile);
 		

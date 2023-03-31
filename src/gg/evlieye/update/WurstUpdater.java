@@ -88,7 +88,7 @@ public final class EvlieyeUpdater implements UpdateListener
 			String text = "An error occurred while checking for updates."
 				+ " Click \u00a7nhere\u00a7r to check manually.";
 			String url =
-				"https://www.wurstclient.net/download/?utm_source=Evlieye+Client&utm_medium=EvlieyeUpdater+chat+message&utm_content=An+error+occurred+while+checking+for+updates.";
+				"https://www.evlieye.gg/download/?utm_source=Evlieye+Client&utm_medium=EvlieyeUpdater+chat+message&utm_content=An+error+occurred+while+checking+for+updates.";
 			showLink(text, url);
 			return;
 		}
@@ -101,7 +101,7 @@ public final class EvlieyeUpdater implements UpdateListener
 		String text =
 			textPart1 + " Click \u00a7nhere\u00a7r to download the update.";
 		String url =
-			"https://www.wurstclient.net/download/?utm_source=Evlieye+Client&utm_medium=EvlieyeUpdater+chat+message&utm_content="
+			"https://www.evlieye.gg/download/?utm_source=Evlieye+Client&utm_medium=EvlieyeUpdater+chat+message&utm_content="
 				+ URLEncoder.encode(textPart1, StandardCharsets.UTF_8);
 		showLink(text, url);
 	}
